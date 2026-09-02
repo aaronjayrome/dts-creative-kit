@@ -41,6 +41,7 @@ no file hunting.</p>
 <button class="nav" data-go="email-send">The main send — link + kit</button>
 <button class="nav" data-go="email-nolink">Kit email — no personal link (supporters + OGF)</button>
 <button class="nav" data-go="email-ogf">OGF follow-up — Day 8 of 90</button>
+<button class="nav" data-go="sql-ogf-kit">SQL — fill the OGF kit (RUN BEFORE SENDING)</button>
 <button class="nav" data-go="email-captain">Captain code recovery email</button>
 <button class="nav" data-go="roster">Send roster — 81 people</button></nav>
 
@@ -730,70 +731,75 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
     <button class="ghost sel" data-for="email-ogf">Select all</button>
     <button class="ghost tog" data-for="email-ogf">View rendered</button>
     <span class="msg"></span>
-    <span class="size">8.2 KB</span>
+    <span class="size">7.9 KB</span>
   </div>
   <textarea readonly spellcheck="false" data-code="email-ogf">&lt;!-- EMAIL-OGF-DAY8  -  One Grand Film follow-up, 2026-09-02 (day 8 of 90)
 
-     WRITING RULES FOR THIS LIST (AJ, 2026-09-02):
+     🔴 THIS IS A FILMMAKERS&#x27; LIST (AJ, 2026-09-02). They care about the WORK
+     first. The stills are the HOOK - subject line and headline - but they are
+     NOT shown in the email. This is a GATED send: the only way to see them is
+     to claim a kit at /join?b=ogf. Traction is proof underneath, never the hook.
+     ⚠️ DEPENDS ON 02-DATABASE/2026-09-02_Populate-OGF-kit-assets.sql HAVING RUN.
+     Verified 2026-09-02 that dts_kit(&#x27;21E848&#x27;) returns asset_set &#x27;ogf-2026&#x27; with
+     ZERO assets. Send this before that SQL runs and every claim lands on an
+     empty gallery.
+
+     OTHER RULES FOR THIS LIST:
        - Investors are on it. Nothing frames as going badly.
        - Short. Busy people, not people who owe him an open.
-       - NEVER put the briefing context in the copy. No &quot;most of you didn&#x27;t open
-         the last one&quot;, no &quot;here&#x27;s a quick update&quot;. Just give the update.
+       - NEVER put the briefing context in the copy. No &quot;you didn&#x27;t open the
+         last one&quot;, no &quot;here&#x27;s a quick update&quot;. Just give the update.
        - Depth lives in the YouTube series; the email is the headline.
 
      NUMBERS READ OFF THE LIVE SITE 2026-09-02 - re-read before any resend:
-       284 requests sent - 27 cities in play - 4 theaters unlocked
-       Prytania NOLA 79/30 - Vidiots LA 43/30 - Texas Dallas 41/30
-       AFS Austin 33/30 - Plaza Atlanta 12/30 - Gateway Columbus 9/30
-     &quot;Over the line&quot; = past the 30 threshold, the site&#x27;s own framing.
+       284 requests - 27 cities in play - 4 theaters past the 30 threshold
+       Prytania NOLA 79 - Vidiots LA 43 - Texas Dallas 41 - AFS Austin 33
      Never say booked: the site says 0 booked and that stays true.
 
+     Stills are served from the kit&#x27;s own GitHub Pages origin (verified 200).
      Video is titled &quot;Day 6 of 90&quot; but posted day 7; email names no day for it.
-     Thumbnail is YouTube&#x27;s own CDN, evergreen art, nothing to host.
      Merge tags: {{contact.first_name}} --&gt;
 &lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;margin:0;padding:0;&quot;&gt;
 &lt;tr&gt;&lt;td align=&quot;center&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;padding:32px 16px;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Roboto,Helvetica,Arial,sans-serif;&quot;&gt;
 &lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:560px;margin:0 auto;background:#0f0f0f;&quot;&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;
 &lt;div style=&quot;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8b8b8b;font-weight:900;&quot;&gt;DEMAND &lt;span style=&quot;color:#efc417;&quot;&gt;THE SCREEN&lt;/span&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 8px;&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:30px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;font-weight:900;color:#ffffff;&quot;&gt;Four cities are over the line.&lt;/h1&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 8px;&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:30px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;font-weight:900;color:#ffffff;&quot;&gt;The first stills are out.&lt;/h1&gt;&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#efc417;&quot;&gt;Day 8 of 90. Two indie films, no distributor, going straight at the theaters.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#efc417;&quot;&gt;Nobody outside the crew has seen them. Claim a kit and they&amp;rsquo;re yours.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Thirty people asking the same cinema for the same film in the same week is what gets a programmer&amp;rsquo;s attention. Four cities have passed it.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Ten frames from &lt;em&gt;Dead Dawn&lt;/em&gt; and &lt;em&gt;Silt&lt;/em&gt; &amp;mdash; shot on ARRI, on location, with Tommy Wiseau, David Anders, Malcolm Goodwin, Andrea Sixtos, Ashley Lenz and Vernon Davis between them. More go out every week.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;They come with the posters, behind-the-scenes, twenty post-ready graphics and ten captions already written &amp;mdash; plus a tracked link of your own. Takes about thirty seconds to claim, costs nothing.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 26px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/join?b=ogf&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:16px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;Claim your kit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Both films are going into theaters with no distributor. Thirty people asking the same cinema in the same week is what gets a programmer&amp;rsquo;s attention &amp;mdash; &lt;strong style=&quot;color:#ffffff;&quot;&gt;four cities have passed it in eight days.&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;
 &lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;
-&lt;tr&gt;&lt;td style=&quot;padding:20px;&quot;&gt;
-&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:15px;line-height:1.9;color:#d6d6d6;&quot;&gt;
-&lt;tr&gt;&lt;td style=&quot;color:#ffffff;font-weight:700;&quot;&gt;Prytania &amp;mdash; New Orleans&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;79 / 30&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;color:#ffffff;font-weight:700;&quot;&gt;Vidiots &amp;mdash; Los Angeles&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;43 / 30&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;color:#ffffff;font-weight:700;&quot;&gt;Texas Theatre &amp;mdash; Dallas&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;41 / 30&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;color:#ffffff;font-weight:700;&quot;&gt;AFS Cinema &amp;mdash; Austin&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;33 / 30&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding-top:8px;&quot;&gt;Plaza &amp;mdash; Atlanta&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-family:ui-monospace,Menlo,monospace;padding-top:8px;&quot;&gt;12 / 30&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;&quot;&gt;Gateway &amp;mdash; Columbus&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-family:ui-monospace,Menlo,monospace;&quot;&gt;9 / 30&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:14.5px;line-height:1.85;color:#d6d6d6;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;color:#ffffff;&quot;&gt;New Orleans&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;79 / 30&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;color:#ffffff;&quot;&gt;Los Angeles&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;43 / 30&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;color:#ffffff;&quot;&gt;Dallas&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;41 / 30&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;color:#ffffff;&quot;&gt;Austin&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;&quot;&gt;33 / 30&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
-&lt;p style=&quot;margin:16px 0 0;font-size:13.5px;line-height:1.6;color:#8b8b8b;&quot;&gt;284 requests sent from people&amp;rsquo;s own inboxes &amp;middot; 27 cities in play &amp;middot; theaters are writing back, and we&amp;rsquo;re in active conversations with several.&lt;/p&gt;
+&lt;p style=&quot;margin:14px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;284 requests sent from people&amp;rsquo;s own inboxes &amp;middot; 27 cities in play &amp;middot; theaters are writing back and we&amp;rsquo;re in active conversations with several.&lt;/p&gt;
 &lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Momentum is the whole game from here. A hundred requests spread over a month is noise. The same hundred inside a week is a market.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;My films are the crash-test dummy. If this holds, the next thing I build is the version you point at yours.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 12px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;First look at the films&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Real stills from &lt;em&gt;Dead Dawn&lt;/em&gt; and &lt;em&gt;Silt&lt;/em&gt; are out for the first time &amp;mdash; in the kit, alongside twenty post-ready images and ten captions in two versions: one about the mechanism, one about the films. Claim a kit and it&amp;rsquo;s all yours, with a tracked link of your own.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/creative-kit&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:16px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;See the stills &amp;amp; claim a kit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;I&amp;rsquo;m running the whole thing live, daily or near enough, to day 90 &amp;mdash; the wins, the dead ends, and what programmers actually write back.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 14px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;I&amp;rsquo;m running the whole thing live, daily or near enough, to day 90 &amp;mdash; including what programmers actually write back.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 12px;&quot;&gt;
 &lt;a href=&quot;https://www.youtube.com/watch?v=ai-ptQcOrrU&quot; style=&quot;display:block;text-decoration:none;&quot;&gt;
@@ -801,11 +807,9 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
 &lt;/a&gt;
 &lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:15px;line-height:1.6;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ai-ptQcOrrU&quot; style=&quot;color:#efc417;text-decoration:none;font-weight:700;&quot;&gt;Watch the latest &amp;rarr;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 26px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:15px;line-height:1.6;&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ai-ptQcOrrU&quot; style=&quot;color:#efc417;text-decoration:none;font-weight:700;&quot;&gt;Watch the latest &amp;rarr;&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:15px;line-height:1.65;color:#c2c2c2;&quot;&gt;Or take thirty seconds and send the request for your own city: &lt;a href=&quot;https://demandthescreen.com/demand-page&quot; style=&quot;color:#efc417;&quot;&gt;demandthescreen.com&lt;/a&gt;. If there&amp;rsquo;s no theater near you yet, it asks which room you&amp;rsquo;d turn up to &amp;mdash; that&amp;rsquo;s how the next city gets picked.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;First screenings are &lt;strong style=&quot;color:#ffffff;&quot;&gt;Friday, September 25&lt;/strong&gt;. At day 90 you get the numbers either way &amp;mdash; and if this keeps going the way it&amp;rsquo;s going, the version built for your film.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:15px;line-height:1.65;color:#c2c2c2;&quot;&gt;Thirty seconds to send the request for your own city: &lt;a href=&quot;https://demandthescreen.com/demand-page&quot; style=&quot;color:#efc417;&quot;&gt;demandthescreen.com&lt;/a&gt;. First screenings are &lt;strong style=&quot;color:#ffffff;&quot;&gt;Friday, September 25&lt;/strong&gt;.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 28px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.6;color:#d6d6d6;&quot;&gt;&amp;mdash; AJ Rome&lt;br&gt;&lt;span style=&quot;color:#8b8b8b;font-size:14px;&quot;&gt;Director, &lt;em&gt;Dead Dawn&lt;/em&gt; &amp;amp; &lt;em&gt;Silt&lt;/em&gt; &amp;middot; Roaming Lens Films&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
@@ -826,6 +830,71 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
 &lt;/table&gt;
 </textarea>
   <iframe class="prev hide" data-prev="email-ogf" sandbox="allow-same-origin"></iframe>
+</section>
+
+<section class="item hide" id="sql-ogf-kit">
+  <h2>SQL — fill the OGF kit (RUN BEFORE SENDING)</h2>
+  <p class="where">Supabase SQL editor, dts-prod. Without this every OGF claim lands on an empty gallery.</p>
+  <div class="bar">
+    <button class="copy" data-for="sql-ogf-kit">Copy all</button>
+    <button class="ghost sel" data-for="sql-ogf-kit">Select all</button>
+    
+    <span class="msg"></span>
+    <span class="size">5.3 KB</span>
+  </div>
+  <textarea readonly spellcheck="false" data-code="sql-ogf-kit">-- ============================================================
+-- POPULATE THE OGF KIT  ·  set_slug &#x27;ogf-2026&#x27;
+-- 2026-09-02. Verified before writing this: dts_kit(&#x27;21E848&#x27;) returned
+-- asset_set &#x27;ogf-2026&#x27; with ZERO assets and 4 captions. Anyone claiming a
+-- kit from the OGF email would land on a page with no images - which is
+-- exactly the broken promise the email&#x27;s whole hook depends on not making.
+--
+-- URLs point at the kit&#x27;s own GitHub Pages origin, all verified serving 200
+-- with access-control-allow-origin: *. Nothing needs uploading to GHL.
+--
+-- SAFE TO RE-RUN: deletes the set&#x27;s rows first, then re-inserts.
+-- ONLY released week-1 stills are here. Weeks 2-13 are not published.
+-- ============================================================
+
+begin;
+
+delete from dts_kit_assets where set_slug = &#x27;ogf-2026&#x27;;
+
+insert into dts_kit_assets (set_slug, sort, name, note, url, width, height) values
+  (&#x27;ogf-2026&#x27;, 10, &#x27;Still · Anna Beth Post Office Antlers 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-post-office-antlers-001.jpg&#x27;, 1080, 454),
+  (&#x27;ogf-2026&#x27;, 20, &#x27;Still · Anna Beth Red Cu&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-red-cu.jpg&#x27;, 1080, 455),
+  (&#x27;ogf-2026&#x27;, 30, &#x27;Still · Anna Beth Trappers 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-trappers-001.jpg&#x27;, 1080, 455),
+  (&#x27;ogf-2026&#x27;, 40, &#x27;Still · Bartleby Lake 001&#x27;, &#x27;1080 x 451&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-bartleby-lake-001.jpg&#x27;, 1080, 451),
+  (&#x27;ogf-2026&#x27;, 50, &#x27;Still · Dawn Tesla 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-dawn-tesla-001.jpg&#x27;, 1080, 454),
+  (&#x27;ogf-2026&#x27;, 60, &#x27;Still · Group Lake Breakfast&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-group-lake-breakfast.jpg&#x27;, 1080, 454),
+  (&#x27;ogf-2026&#x27;, 70, &#x27;Still · Hadria Cheers 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-cheers-001.jpg&#x27;, 1080, 455),
+  (&#x27;ogf-2026&#x27;, 80, &#x27;Still · Hadria Deep Focus 001&#x27;, &#x27;1080 x 451&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-deep-focus-001.jpg&#x27;, 1080, 451),
+  (&#x27;ogf-2026&#x27;, 90, &#x27;Still · Javier Trappers 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-javier-trappers-001.jpg&#x27;, 1080, 454),
+  (&#x27;ogf-2026&#x27;, 100, &#x27;Still · Mike Lake 001&#x27;, &#x27;1080 x 450&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-mike-lake-001.jpg&#x27;, 1080, 450),
+  (&#x27;ogf-2026&#x27;, 110, &#x27;Post · 01 Hook&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-01-hook.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 120, &#x27;Post · 02 Dead Dawn Poster&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-02-dead-dawn-poster.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 130, &#x27;Post · 03 Dead Dawn Still&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-03-dead-dawn-still.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 140, &#x27;Post · 04 Dead Dawn Neon&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-04-dead-dawn-neon.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 150, &#x27;Post · 05 Silt Poster&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-05-silt-poster.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 160, &#x27;Post · 06 Silt Still&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-06-silt-still.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 170, &#x27;Post · 07 Cast&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-07-cast.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 180, &#x27;Post · 08 Cta&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-08-cta.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 190, &#x27;Post · 01 Hook&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-01-hook.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 200, &#x27;Post · 02 The Old Way&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-02-the-old-way.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 210, &#x27;Post · 03 Mechanism&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-03-mechanism.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 220, &#x27;Post · 04 Proof&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-04-proof.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 230, &#x27;Post · 05 Who&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-05-who.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 240, &#x27;Post · 06 Cta&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-06-cta.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 250, &#x27;Card · Aj 00 Who Is Aj Rome&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/aj-00-who-is-aj-rome.jpg&#x27;, 1080, 1350),
+  (&#x27;ogf-2026&#x27;, 260, &#x27;Poster · Posters Deaddawn Poster B Dawn Alone&#x27;, &#x27;843 x 1280&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/posters-deaddawn-poster-b-dawn-alone.jpg&#x27;, 843, 1280),
+  (&#x27;ogf-2026&#x27;, 270, &#x27;Poster · Posters Silt Poster A Floating Teal&#x27;, &#x27;843 x 1280&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/posters-silt-poster-a-floating-teal.jpg&#x27;, 843, 1280);
+
+commit;
+
+-- verify: should return the count you just inserted, not 0
+select json_array_length(dts_kit(&#x27;21E848&#x27;) -&gt; &#x27;assets&#x27;) as ogf_assets;
+</textarea>
+  
 </section>
 
 <section class="item hide" id="email-captain">
