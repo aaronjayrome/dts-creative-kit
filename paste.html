@@ -39,6 +39,7 @@ no file hunting.</p>
 <nav><button class="nav on" data-go="ghl-page">GHL page body — /creative-kit</button>
 <button class="nav" data-go="email-recovery">Recovery email body</button>
 <button class="nav" data-go="email-send">The main send — link + kit</button>
+<button class="nav" data-go="email-nolink">Kit email — no personal link (supporters + OGF)</button>
 <button class="nav" data-go="email-captain">Captain code recovery email</button>
 <button class="nav" data-go="roster">Send roster — 81 people</button></nav>
 
@@ -594,7 +595,7 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
 
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Twenty post-ready images and ten captions. Nothing to design, nothing to write, nothing to ask me about first. &lt;strong style=&quot;color:#ffffff;&quot;&gt;If it&amp;rsquo;s in the kit, it&amp;rsquo;s cleared &amp;mdash; post it.&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;a href=&quot;https://aaronjayrome.github.io/dts-creative-kit/?ref={{inboundWebhookRequest.kit_code}}&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:16px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;Open the creative kit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/creative-kit?ref={{inboundWebhookRequest.kit_code}}&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:16px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;Open the creative kit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:15px;line-height:1.6;color:#c2c2c2;&quot;&gt;That button already has your code in it, so &lt;strong style=&quot;color:#ffffff;&quot;&gt;every caption on the page arrives with your link already in it&lt;/strong&gt; &amp;mdash; nothing to paste, no brackets to edit. If you ever open the kit some other way, type &lt;strong style=&quot;color:#ffffff;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;&quot;&gt;{{inboundWebhookRequest.kit_code}}&lt;/strong&gt; into the box at the top and it does the same thing.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 
@@ -630,6 +631,94 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
 &lt;/table&gt;
 </textarea>
   <iframe class="prev hide" data-prev="email-send" sandbox="allow-same-origin"></iframe>
+</section>
+
+<section class="item hide" id="email-nolink">
+  <h2>Kit email — no personal link (supporters + OGF)</h2>
+  <p class="where">GHL campaign to everyone WITHOUT a code. Has no personal-link block.</p>
+  <div class="bar">
+    <button class="copy" data-for="email-nolink">Copy all</button>
+    <button class="ghost sel" data-for="email-nolink">Select all</button>
+    <button class="ghost tog" data-for="email-nolink">View rendered</button>
+    <span class="msg"></span>
+    <span class="size">7.3 KB</span>
+  </div>
+  <textarea readonly spellcheck="false" data-code="email-nolink">&lt;!-- EMAIL-CREATIVE-KIT  -  the creative kit announcement, 2026-08-31
+     Goes to ambassadors AND captains. Same kit for both; the covering note is
+     deliberately identical, because the split has never been the reason anyone
+     did or didn&#x27;t post.
+     Kit URL is live and already in the button below (published 2026-09-01).
+     Hosted on GitHub Pages — public, verified live 2026-09-01. No sharing step.
+     To move it to demandthescreen.com/creative-kit later, this is one
+     find-and-replace in this file.
+     If a GHL custom field holds the DTS code, append ?ref={{contact.dts_referral_code}}
+     to the button href so the page&#x27;s link field pre-fills.
+     Copy rules obeyed: no promised booking, no &quot;studios passed&quot;, no &quot;horror
+     double feature&quot;, 30 is not named as the threshold.
+     Merge tags: {{contact.first_name}} --&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;margin:0;padding:0;&quot;&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;padding:32px 16px;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Roboto,Helvetica,Arial,sans-serif;&quot;&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:560px;margin:0 auto;background:#0f0f0f;&quot;&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;
+&lt;div style=&quot;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8b8b8b;font-weight:900;&quot;&gt;DEMAND &lt;span style=&quot;color:#efc417;&quot;&gt;THE SCREEN&lt;/span&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 8px;&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:30px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;font-weight:900;color:#ffffff;&quot;&gt;It&amp;rsquo;s all made, {{contact.first_name}}.&lt;/h1&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#efc417;&quot;&gt;Twenty images and ten captions. Nothing to write, nothing to ask me about first.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;The thing standing between you and a post has been the blank page &amp;mdash; what image, what words, and is it alright to say this. So I&amp;rsquo;ve removed all three. Everything on this page is cleared. If it&amp;rsquo;s in the kit, post it.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/creative-kit&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:16px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;Open the creative kit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:20px;&quot;&gt;
+&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;margin-bottom:12px;&quot;&gt;Do this first, it takes ten seconds&lt;/div&gt;
+&lt;p style=&quot;margin:0;font-size:15px;line-height:1.6;color:#c2c2c2;&quot;&gt;Paste &lt;strong style=&quot;color:#ffffff;&quot;&gt;your referral link&lt;/strong&gt; and &lt;strong style=&quot;color:#ffffff;&quot;&gt;your city&lt;/strong&gt; into the bar at the top of the page. Every caption and message below it then fills itself in &amp;mdash; no brackets left to edit, no link to remember to swap. It stays saved on your phone.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 12px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;Pick the lane you&amp;rsquo;re comfortable in&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;The mission.&lt;/strong&gt; That independent film can go to theaters without a studio deciding first. Costs you nothing socially &amp;mdash; you&amp;rsquo;re sharing an experiment, not asking anyone for a favour. Most people find this one easier.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;The films.&lt;/strong&gt; &lt;em&gt;Dead Dawn&lt;/em&gt; and &lt;em&gt;Silt&lt;/em&gt; themselves &amp;mdash; posters, stills, cast. Use this one when the people you&amp;rsquo;re talking to would genuinely watch them.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Both lanes are complete. You don&amp;rsquo;t need both. Pick the one you&amp;rsquo;d say out loud, because that&amp;rsquo;s the one people believe.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;If someone asks who I am,&lt;/strong&gt; don&amp;rsquo;t write it out. There&amp;rsquo;s a card in the kit with my credits on it &amp;mdash; &lt;em&gt;Go Crazy Go Mad&lt;/em&gt;, &lt;em&gt;End Trip&lt;/em&gt;, &lt;em&gt;Dead Dawn&lt;/em&gt;, &lt;em&gt;Silt&lt;/em&gt; &amp;mdash; and a paragraph you can paste. Send that. Explaining me should not be your job.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;The five messages matter more than the post.&lt;/strong&gt; A public post reaches a lot of people who scroll past it. One message to one person who&amp;rsquo;d actually go is worth fifty of those. Five of those messages are written for you in the kit.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border-left:3px solid #efc417;border-radius:6px;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;
+&lt;p style=&quot;margin:0 0 10px;font-size:16px;line-height:1.6;color:#ffffff;font-weight:700;&quot;&gt;One question, and it&amp;rsquo;s the important one:&lt;/p&gt;
+&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Has a theater ever written back to anyone you sent this to? If so, &lt;strong style=&quot;color:#efc417;&quot;&gt;please forward it to team@demandthescreen.com.&lt;/strong&gt; The demand email goes out from each person&amp;rsquo;s own inbox, so a programmer hitting Reply reaches &lt;em&gt;them&lt;/em&gt;, not us. We&amp;rsquo;ve found three replies purely by luck and I&amp;rsquo;m certain we&amp;rsquo;ve missed more. A theater saying yes is the most valuable thing that happens in this campaign and right now nothing catches it.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:16px 24px 20px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Anything missing, or an image you want that isn&amp;rsquo;t in there &amp;mdash; just reply to this. I&amp;rsquo;d rather make it than have you go without it.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 28px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.6;color:#d6d6d6;&quot;&gt;&amp;mdash; AJ Rome&lt;br&gt;&lt;span style=&quot;color:#8b8b8b;font-size:14px;&quot;&gt;Director, &lt;em&gt;Dead Dawn&lt;/em&gt; &amp;amp; &lt;em&gt;Silt&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:28px 24px 0;border-top:1px solid #2a2a2a;&quot;&gt;
+&lt;p style=&quot;margin:0;font-size:12px;line-height:1.6;color:#6f6f6f;&quot;&gt;Demand The Screen &amp;middot; Dead Dawn &amp;amp; Silt &amp;middot; Roaming Lens Films&lt;br&gt;You are receiving this because you signed up to help get these films into theaters.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</textarea>
+  <iframe class="prev hide" data-prev="email-nolink" sandbox="allow-same-origin"></iframe>
 </section>
 
 <section class="item hide" id="email-captain">
