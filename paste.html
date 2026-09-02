@@ -733,7 +733,7 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
     <button class="ghost sel" data-for="email-personal">Select all</button>
     <button class="ghost tog" data-for="email-personal">View rendered</button>
     <span class="msg"></span>
-    <span class="size">5.2 KB</span>
+    <span class="size">5.6 KB</span>
   </div>
   <textarea readonly spellcheck="false" data-code="email-personal">&lt;!-- EMAIL-COMPANY-PERSONAL  -  2026-09-02
      Cast, crew and investors (~50), sent from AJ&#x27;s PERSONAL address, not GHL.
@@ -741,10 +741,12 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
      TWO REASONS THIS DIFFERS FROM EMAIL-COMPANY-SILT-STILLS.html:
      1. NO MERGE TAGS. There is no GHL merge on a personal send, so
         {{contact.first_name}} would render literally to all fifty people.
-     2. LIGHT GROUND, DARK TEXT. Gmail&#x27;s compose regularly drops bgcolor on the
-        outer table while keeping inline text colours - a dark-themed email
-        pasted in can arrive as pale grey text on white. Every colour here is
-        legible if the background is stripped entirely.
+     2. BLACK TEXT ON AN EXPLICIT WHITE GROUND. It paints #ffffff on its own
+        outer table AND on the inner wrapper, so it never inherits whatever is
+        behind it. The first cut of this relied on the container being light and
+        rendered dark-on-dark in a dark preview - exactly the failure mode this
+        file exists to avoid. Text is #000000, links are a gold dark enough to
+        pass contrast on white.
 
      HOW TO SEND: open the preview page, Cmd+A, Cmd+C, paste into a Gmail
      compose window. Images are hosted and will load. BCC the list.
@@ -752,48 +754,52 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
      Dead Dawn leads: the investors here are Dead Dawn investors. Vernon Davis
      is the only one with a Silt stake (executive producer).
      Numbers off the live site 2026-09-02. Never say booked. --&gt;
-&lt;div style=&quot;max-width:560px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#1a1a1a;&quot;&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; bgcolor=&quot;#ffffff&quot; style=&quot;background:#ffffff;background-color:#ffffff;margin:0;padding:0;&quot;&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot; bgcolor=&quot;#ffffff&quot; style=&quot;background:#ffffff;background-color:#ffffff;padding:8px 16px 24px;&quot;&gt;
+&lt;div style=&quot;max-width:560px;margin:0 auto;text-align:left;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;color:#000000;&quot;&gt;
 
-&lt;p style=&quot;margin:0 0 20px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a7112;font-weight:700;&quot;&gt;Demand The Screen&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 20px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#7a5f0a;font-weight:700;&quot;&gt;Demand The Screen&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 18px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;Quick one, and it&amp;rsquo;s good news.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 18px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;Quick one, and it&amp;rsquo;s good news.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 18px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;&lt;strong&gt;We&amp;rsquo;re in active conversations with multiple theaters&lt;/strong&gt; about &lt;em&gt;Dead Dawn&lt;/em&gt; and &lt;em&gt;Silt&lt;/em&gt; &amp;mdash; eight days in, with no distributor involved at any point.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 18px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;&lt;strong&gt;We&amp;rsquo;re in active conversations with multiple theaters&lt;/strong&gt; about &lt;em&gt;Dead Dawn&lt;/em&gt; and &lt;em&gt;Silt&lt;/em&gt; &amp;mdash; eight days in, with no distributor involved at any point.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 10px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;And the first stills are out. These are the first frames from &lt;em&gt;Dead Dawn&lt;/em&gt;, and the first anyone outside the edit has seen of &lt;em&gt;Silt&lt;/em&gt;:&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 10px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;And the first stills are out. These are the first frames from &lt;em&gt;Dead Dawn&lt;/em&gt;, and the first anyone outside the edit has seen of &lt;em&gt;Silt&lt;/em&gt;:&lt;/p&gt;
 
 &lt;img src=&quot;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-red-cu.jpg&quot; width=&quot;512&quot; alt=&quot;Dead Dawn&quot; style=&quot;display:block;width:100%;max-width:512px;height:auto;border-radius:4px;margin:0 0 8px;&quot;&gt;
 &lt;img src=&quot;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-deep-focus-001.jpg&quot; width=&quot;512&quot; alt=&quot;Silt&quot; style=&quot;display:block;width:100%;max-width:512px;height:auto;border-radius:4px;margin:0 0 20px;&quot;&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;Both posters and behind-the-scenes are in the kit too, and new stills go out every week between now and the screenings.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;Both posters and behind-the-scenes are in the kit too, and new stills go out every week between now and the screenings.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 12px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;&lt;strong&gt;Where the theaters stand.&lt;/strong&gt; Four cities have passed the threshold where a programmer has a real reason to take the meeting:&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 12px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;&lt;strong&gt;Where the theaters stand.&lt;/strong&gt; Four cities have passed the threshold where a programmer has a real reason to take the meeting:&lt;/p&gt;
 
-&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:100%;max-width:360px;margin:0 0 8px;font-size:16px;line-height:2;color:#1a1a1a;&quot;&gt;
+&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;width:100%;max-width:360px;margin:0 0 8px;font-size:16px;line-height:2;color:#000000;&quot;&gt;
 &lt;tr&gt;&lt;td&gt;New Orleans&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;font-weight:700;&quot;&gt;79 / 30&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Los Angeles&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;font-weight:700;&quot;&gt;43 / 30&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Dallas&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;font-weight:700;&quot;&gt;41 / 30&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;Austin&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;font-weight:700;&quot;&gt;33 / 30&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:14px;line-height:1.6;color:#666666;&quot;&gt;284 requests sent from people&amp;rsquo;s own inboxes &amp;middot; 27 cities in play.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:14px;line-height:1.6;color:#555555;&quot;&gt;284 requests sent from people&amp;rsquo;s own inboxes &amp;middot; 27 cities in play.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;First screenings are &lt;strong&gt;Friday, September 25&lt;/strong&gt;, in whichever cities get there. Which ones is still open, and it&amp;rsquo;s decided by how many people ask.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;First screenings are &lt;strong&gt;Friday, September 25&lt;/strong&gt;, in whichever cities get there. Which ones is still open, and it&amp;rsquo;s decided by how many people ask.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 18px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;&lt;strong&gt;If you haven&amp;rsquo;t grabbed your kit yet, this is the moment.&lt;/strong&gt; Your own tracked link, twenty post-ready images, ten captions already written, and the stills. About thirty seconds:&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 18px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;&lt;strong&gt;If you haven&amp;rsquo;t grabbed your kit yet, this is the moment.&lt;/strong&gt; Your own tracked link, twenty post-ready images, ten captions already written, and the stills. About thirty seconds:&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:17px;line-height:1.6;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/join?b=dd-cast-7f3a&quot; style=&quot;color:#8a7112;font-weight:700;&quot;&gt;demandthescreen.com/join?b=dd-cast-7f3a&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:17px;line-height:1.6;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/join?b=dd-cast-7f3a&quot; style=&quot;color:#7a5f0a;font-weight:700;&quot;&gt;demandthescreen.com/join?b=dd-cast-7f3a&lt;/a&gt;&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;Already have one? It lives at &lt;a href=&quot;https://demandthescreen.com/kit&quot; style=&quot;color:#8a7112;&quot;&gt;demandthescreen.com/kit&lt;/a&gt; &amp;mdash; put in the address you signed up with and it&amp;rsquo;ll send your link back.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;Already have one? It lives at &lt;a href=&quot;https://demandthescreen.com/kit&quot; style=&quot;color:#7a5f0a;&quot;&gt;demandthescreen.com/kit&lt;/a&gt; &amp;mdash; put in the address you signed up with and it&amp;rsquo;ll send your link back.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;Your networks are worth more than anyone else&amp;rsquo;s here. One message from you to someone who&amp;rsquo;d actually turn up moves a city&amp;rsquo;s count more than a hundred strangers scrolling past a post.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;Your networks are worth more than anyone else&amp;rsquo;s here. One message from you to someone who&amp;rsquo;d actually turn up moves a city&amp;rsquo;s count more than a hundred strangers scrolling past a post.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#1a1a1a;&quot;&gt;&lt;strong&gt;One ask that costs nothing:&lt;/strong&gt; if a theater ever writes back to someone you sent this to, forward it to &lt;strong&gt;team@demandthescreen.com&lt;/strong&gt;. The requests go out from each person&amp;rsquo;s own inbox, so replies land with them, not us &amp;mdash; and a programmer saying yes is the most valuable thing that happens here.&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 22px;font-size:16px;line-height:1.65;color:#000000;&quot;&gt;&lt;strong&gt;One ask that costs nothing:&lt;/strong&gt; if a theater ever writes back to someone you sent this to, forward it to &lt;strong&gt;team@demandthescreen.com&lt;/strong&gt;. The requests go out from each person&amp;rsquo;s own inbox, so replies land with them, not us &amp;mdash; and a programmer saying yes is the most valuable thing that happens here.&lt;/p&gt;
 
-&lt;p style=&quot;margin:0 0 4px;font-size:16px;line-height:1.6;color:#1a1a1a;&quot;&gt;Thanks for everything on these.&lt;/p&gt;
-&lt;p style=&quot;margin:0;font-size:16px;line-height:1.6;color:#1a1a1a;&quot;&gt;&amp;mdash; AJ&lt;/p&gt;
+&lt;p style=&quot;margin:0 0 4px;font-size:16px;line-height:1.6;color:#000000;&quot;&gt;Thanks for everything on these.&lt;/p&gt;
+&lt;p style=&quot;margin:0;font-size:16px;line-height:1.6;color:#000000;&quot;&gt;&amp;mdash; AJ&lt;/p&gt;
 
 &lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
 </textarea>
   <iframe class="prev hide" data-prev="email-personal" sandbox="allow-same-origin"></iframe>
 </section>
