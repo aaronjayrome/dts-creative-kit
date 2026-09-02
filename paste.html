@@ -1,0 +1,476 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Paste this into GHL</title>
+<style>
+:root{--g:#0F0F0F;--p:#17171B;--l:#2A2A31;--gold:#EFC417;--t:#F1F0EC;--m:#8B8B8B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--g);color:var(--t);
+ font:16px/1.55 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.w{max-width:900px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:22px;margin:0 0 6px;letter-spacing:.02em}
+p{color:var(--m);font-size:14.5px;margin:0 0 18px;max-width:66ch}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px;
+ position:sticky;top:0;background:var(--g);padding:12px 0;z-index:5}
+button{background:var(--gold);border:0;color:#151206;font:600 14px/1 "IBM Plex Sans";
+ letter-spacing:.08em;text-transform:uppercase;padding:14px 20px;border-radius:7px;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--l);color:var(--t)}
+button.done{background:#7BD49A}
+textarea{width:100%;height:58vh;background:#101014;color:#CFCEC9;border:1px solid var(--l);
+ border-radius:9px;padding:14px;font:12px/1.5 "IBM Plex Mono",ui-monospace,Menlo,monospace;
+ white-space:pre;resize:vertical}
+code{color:var(--gold);font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:13px}
+.n{color:var(--m);font-size:13px;margin-top:14px}
+</style></head><body><div class="w">
+<h1>Paste this into the GHL page</h1>
+<p>The whole Custom Code / HTML element for <code>demandthescreen.com/creative-kit</code>.
+Hit Copy, then paste it in and replace whatever is there. Nothing else needs uploading &mdash;
+images and behaviour are served from this same origin.</p>
+<div class="bar">
+  <button id="c">Copy all</button>
+  <button class="ghost" id="s">Select all</button>
+  <span class="n" id="msg"></span>
+</div>
+<textarea id="t" readonly spellcheck="false">&lt;title&gt;The Captain's Kit&lt;/title&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap"&gt;
+
+&lt;style&gt;
+/* Demand the Screen — brand-locked, deliberately single-theme.
+   Tokens are lifted from 07-BRAND-ASSETS/carousel-ogf/svg/*.svg so the page and
+   the assets it hands out read as one campaign. */
+:root{
+  --ground:#0F0F0F;
+  --panel:#17171B;
+  --panel-2:#1E1E24;
+  --line:#2A2A31;
+  --line-soft:#212128;
+  --gold:#EFC417;
+  --gold-dim:#8A7112;
+  --text:#F1F0EC;
+  --muted:#8B8B8B;
+  --muted-2:#6A6A70;
+  --ok:#7BD49A;
+  --r:10px;
+  --pad:clamp(16px,4vw,28px);
+  --wrap:860px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--text);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-text-size-adjust:100%;
+}
+h1,h2,h3,.disp{
+  font-family:Oswald,"DIN Condensed","Haettenschweiler","Arial Narrow",Impact,sans-serif;
+  font-weight:600; letter-spacing:.01em; text-transform:uppercase; text-wrap:balance; margin:0;
+}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{
+  outline:2px solid var(--gold); outline-offset:2px; border-radius:4px;
+}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 var(--pad)}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+
+/* ---------------------------------------------------------------- masthead */
+.mast{border-bottom:1px solid var(--line); background:var(--ground)}
+.mast .wrap{padding-top:26px; padding-bottom:22px}
+.brand{display:flex; align-items:center; gap:9px; font-family:"IBM Plex Sans";
+  font-weight:600; font-size:12px; letter-spacing:.22em; text-transform:uppercase}
+.brand .b1{color:var(--gold)} .brand .b2{color:var(--muted)}
+.rule{width:74px; height:4px; background:var(--gold); margin:20px 0 14px}
+h1{font-size:clamp(34px,8.5vw,62px); line-height:.94}
+h1 em{font-style:normal; color:var(--gold); display:block}
+.dek{color:var(--muted); max-width:56ch; margin:14px 0 0; font-size:15.5px}
+
+/* film strip of the actual work — the page opens by showing, not claiming */
+.strip{display:flex; gap:10px; overflow-x:auto; padding:20px var(--pad) 26px;
+  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch}
+.strip img{height:186px; width:auto; border-radius:6px; scroll-snap-align:start;
+  border:1px solid var(--line); flex:0 0 auto}
+
+/* ------------------------------------------------------------------ setup */
+.setup{position:sticky; top:0; z-index:40; background:rgba(15,15,17,.94);
+  backdrop-filter:blur(9px); border-bottom:1px solid var(--line)}
+.setup .wrap{padding-top:13px; padding-bottom:13px}
+.setup-row{display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end}
+.field{flex:1 1 190px; min-width:0}
+.field label{display:block; font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted-2); margin-bottom:5px; font-weight:600}
+.field input{width:100%; background:var(--panel-2); border:1px solid var(--line);
+  color:var(--text); border-radius:7px; padding:9px 11px; font:inherit; font-size:15px}
+.field input::placeholder{color:#55555C}
+.setup-note{width:100%; font-size:12.5px; color:var(--muted-2); margin-top:9px}
+.setup-note b{color:var(--gold); font-weight:600}
+#setup-ok{color:var(--ok)}
+#setup-ok b{color:var(--ok)}
+.where{border:0; padding:6px 0 0}
+.where summary{font-size:12.5px; color:var(--gold); font-weight:600}
+.where summary::before{content:"?"; color:var(--gold); font-family:"IBM Plex Mono";
+  margin-right:8px; font-weight:600}
+.where[open] summary::before{content:"×"}
+.where p{color:var(--muted); font-size:13px; margin:8px 0 0 22px; line-height:1.55}
+.where .mono{color:var(--text); font-family:"IBM Plex Mono"; font-size:12.5px}
+
+/* ----------------------------------------------------------------- steps */
+section{padding:44px 0; border-bottom:1px solid var(--line-soft)}
+.step-no{font-family:"IBM Plex Mono"; font-size:12px; color:var(--gold);
+  letter-spacing:.16em; font-weight:600}
+h2{font-size:clamp(25px,5.6vw,36px); line-height:1.02; margin:9px 0 0}
+.sub{color:var(--muted); margin:11px 0 0; max-width:62ch; font-size:15px}
+
+/* ----------------------------------------------------------------- lanes */
+.lanes{display:flex; gap:8px; margin:26px 0 6px; flex-wrap:wrap}
+.lane{background:transparent; border:1px solid var(--line); color:var(--muted);
+  font:600 12px/1 "IBM Plex Sans"; letter-spacing:.13em; text-transform:uppercase;
+  padding:11px 15px; border-radius:999px; cursor:pointer; transition:.15s}
+.lane:hover{border-color:#3C3C45; color:var(--text)}
+.lane[aria-selected="true"]{background:var(--gold); border-color:var(--gold); color:#151206}
+.lane-why{color:var(--muted-2); font-size:13.5px; margin:14px 0 0; max-width:64ch}
+
+/* --------------------------------------------------------------- gallery */
+.grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:22px}
+@media(min-width:660px){.grid{grid-template-columns:repeat(3,1fr)}}
+.tile{background:none; border:0; padding:0; cursor:zoom-in; text-align:left; color:inherit;
+  display:flex; flex-direction:column; gap:7px}
+.tile img{width:100%; height:auto; display:block; border-radius:7px;
+  border:1px solid var(--line); background:var(--panel)}
+.tile span{font-size:11.5px; color:var(--muted-2); line-height:1.35}
+.hint{display:flex; gap:9px; align-items:flex-start; background:var(--panel);
+  border:1px solid var(--line); border-left:3px solid var(--gold);
+  border-radius:var(--r); padding:13px 15px; margin-top:22px; font-size:13.5px; color:var(--muted)}
+.hint b{color:var(--text); font-weight:600}
+
+/* -------------------------------------------------------------- captions */
+.cards{display:flex; flex-direction:column; gap:12px; margin-top:22px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+.card-h{display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:12px 15px; border-bottom:1px solid var(--line-soft)}
+.card-h h3{font-size:16px; letter-spacing:.06em; color:var(--text)}
+.card-b{padding:14px 15px; white-space:pre-wrap; font-size:14.5px; color:#D8D7D2;
+  line-height:1.62; max-height:none}
+.copy{flex:0 0 auto; background:var(--panel-2); border:1px solid var(--line); color:var(--text);
+  font:600 11.5px/1 "IBM Plex Sans"; letter-spacing:.13em; text-transform:uppercase;
+  padding:9px 13px; border-radius:6px; cursor:pointer; transition:.15s}
+.copy:hover{border-color:var(--gold); color:var(--gold)}
+.copy.done{background:var(--ok); border-color:var(--ok); color:#0B2216}
+mark{background:rgba(239,196,23,.17); color:var(--gold); border-radius:3px; padding:0 2px}
+
+/* ------------------------------------------------------------------ misc */
+.two{display:grid; gap:12px; margin-top:22px}
+@media(min-width:660px){.two{grid-template-columns:1fr 1fr}}
+.film{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:17px}
+.film h3{font-size:22px; color:var(--text)}
+.film .genre{color:var(--gold); font:600 10.5px/1.5 "IBM Plex Sans"; letter-spacing:.13em;
+  text-transform:uppercase; margin:7px 0 11px}
+.film p{margin:0 0 11px; font-size:14.5px; color:#CFCEC9}
+.film .cast{color:var(--muted-2); font-size:12.5px; margin:0}
+.film a{font-size:13px; font-weight:600; text-decoration:none; border-bottom:1px solid var(--gold-dim)}
+details{border-top:1px solid var(--line-soft); padding:13px 0}
+details summary{cursor:pointer; font-weight:600; font-size:15px; list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+"; color:var(--gold); font-family:"IBM Plex Mono";
+  margin-right:10px; font-weight:600}
+details[open] summary::before{content:"–"}
+details p{color:var(--muted); margin:9px 0 0 24px; font-size:14.5px}
+.dont{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:17px; margin-top:22px}
+.dont li{margin-bottom:11px; font-size:14.5px; color:#CFCEC9}
+.dont li:last-child{margin-bottom:0}
+.dont b{color:var(--text)}
+.x{color:#E2705C; font-weight:700; margin-right:6px}
+footer{padding:38px 0 60px; color:var(--muted-2); font-size:13px}
+footer a{text-decoration:none}
+
+/* -------------------------------------------------------------- lightbox */
+.lb{position:fixed; inset:0; z-index:90; background:rgba(6,6,7,.96); display:none;
+  align-items:center; justify-content:center; flex-direction:column; gap:14px; padding:20px}
+.lb.on{display:flex}
+.lb img{max-width:100%; max-height:74vh; border-radius:8px}
+.lb p{color:var(--muted); font-size:13.5px; text-align:center; margin:0; max-width:44ch}
+.lb button{background:var(--panel-2); border:1px solid var(--line); color:var(--text);
+  font:600 12px/1 "IBM Plex Sans"; letter-spacing:.13em; text-transform:uppercase;
+  padding:11px 17px; border-radius:6px; cursor:pointer}
+.lane-heading{font-family:Oswald,"DIN Condensed","Arial Narrow",Impact,sans-serif;
+  font-weight:600; text-transform:uppercase; letter-spacing:.02em;
+  font-size:21px; color:var(--text); margin:30px 0 4px}
+.lane-block+.lane-block,.bin-block+.bin-block{border-top:1px solid var(--line-soft); margin-top:34px}
+
+/* Baseline is NO JavaScript: every lane and bin renders, stacked with headings,
+   because GHL's page builder rewrites script tags to type="application/json"
+   and a page that draws itself from JS would come out empty there. The tab UI,
+   the personalisation bar and the lightbox are added only once scripts run. */
+.lanes{display:none}
+body.js-on .lanes{display:flex}
+body.js-on .lane-heading{display:none}
+body.js-on .lane-block[hidden],body.js-on .bin-block[hidden]{display:none}
+body.js-on .lane-block+.lane-block,body.js-on .bin-block+.bin-block{border-top:0; margin-top:0}
+.setup{display:none}
+body.js-on .setup{display:block}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+&lt;/style&gt;
+
+&lt;header class="mast"&gt;
+  &lt;div class="wrap"&gt;
+    &lt;div class="brand"&gt;&lt;span class="b1"&gt;Demand&lt;/span&gt;&lt;span class="b2"&gt;The Screen&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="rule"&gt;&lt;/div&gt;
+    &lt;h1&gt;Post this&lt;em&gt;without asking me first.&lt;/em&gt;&lt;/h1&gt;
+    &lt;p class="dek"&gt;Everything a captain or ambassador needs, already written and already made.
+      Pick a lane, take the images, copy a caption, send five messages. Nothing here needs my
+      approval — if it's on this page, it's cleared.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="strip" id="strip" aria-label="A sample of the creative in this kit"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-01-hook.jpg" alt="Hook — you can put a movie in your theater" loading="lazy"&gt;
+&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-02-dead-dawn-poster.jpg" alt="Dead Dawn — poster" loading="lazy"&gt;
+&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-04-dead-dawn-neon.jpg" alt="Dead Dawn — some secrets refuse to stay buried" loading="lazy"&gt;
+&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-05-silt-poster.jpg" alt="Silt — poster" loading="lazy"&gt;
+&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-04-proof.jpg" alt="Proof — two finished films" loading="lazy"&gt;
+&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-post-office-antlers-001.jpg" alt="Anna Beth Post Office Antlers 001" loading="lazy"&gt;
+&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/posters-deaddawn-poster-b-dawn-alone.jpg" alt="Dead Dawn — poster B dawn alone" loading="lazy"&gt;&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;div class="setup"&gt;
+  &lt;div class="wrap"&gt;
+    &lt;div class="setup-row"&gt;
+      &lt;div class="field"&gt;
+        &lt;label for="f-link"&gt;Your link or your 6-character code&lt;/label&gt;
+        &lt;input id="f-link" type="text" inputmode="text" spellcheck="false" autocapitalize="characters"
+               placeholder="21E848  —  or paste the whole link"&gt;
+      &lt;/div&gt;
+      &lt;div class="field"&gt;
+        &lt;label for="f-city"&gt;Your city&lt;/label&gt;
+        &lt;input id="f-city" type="text" placeholder="Dallas"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class="setup-note" id="setup-ok" hidden&gt;&lt;/p&gt;
+    &lt;p class="setup-note"&gt;Fill these in once and &lt;b&gt;every caption below fills itself in&lt;/b&gt; —
+      no brackets left to edit. Saved on this device only.&lt;/p&gt;
+    &lt;details class="where"&gt;
+      &lt;summary&gt;Where do I find my link?&lt;/summary&gt;
+      &lt;p&gt;&lt;b&gt;It came in your kit email&lt;/b&gt; — the line beginning
+      &lt;span class="mono"&gt;demandthescreen.com/demand-page?ref=&lt;/span&gt; followed by six characters.
+      You can paste the whole link, or just those six characters.&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;Lost it?&lt;/b&gt; Go to &lt;a href="https://demandthescreen.com/kit" target="_blank"
+      rel="noopener"&gt;demandthescreen.com/kit&lt;/a&gt; and put in the email address you signed up with —
+      it will send your link straight back to you.&lt;/p&gt;
+      &lt;p&gt;Still stuck? Reply to the email this came in, or write to
+      &lt;a href="mailto:team@demandthescreen.com"&gt;team@demandthescreen.com&lt;/a&gt; and we will dig it out.&lt;/p&gt;
+    &lt;/details&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;main&gt;
+&lt;section id="s1"&gt;&lt;div class="wrap"&gt;
+  &lt;div class="step-no"&gt;STEP 1&lt;/div&gt;
+  &lt;h2&gt;Pick the lane you're comfortable in&lt;/h2&gt;
+  &lt;p class="sub"&gt;Two ways to talk about this. Neither is more correct — pick the one you'd
+    actually say out loud, because that's the one people believe.&lt;/p&gt;
+  &lt;div class="lanes" role="tablist"&gt;
+    &lt;button class="lane" role="tab" data-lane="mission" aria-selected="true"&gt;The mission&lt;/button&gt;
+    &lt;button class="lane" role="tab" data-lane="films" aria-selected="false"&gt;The films&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section id="s2"&gt;&lt;div class="wrap"&gt;
+  &lt;div class="step-no"&gt;STEP 2 &amp;amp; 3&lt;/div&gt;
+  &lt;h2&gt;Take the images, copy a caption&lt;/h2&gt;
+  &lt;p class="sub"&gt;Sized for a feed carousel. The captions are written to be posted as-is —
+    edited beats perfect, so make it sound like you.&lt;/p&gt;
+&lt;section class="lane-block" data-lane-block="mission"&gt;&lt;h3 class="lane-heading"&gt;The mission&lt;/h3&gt;&lt;p class="lane-why"&gt;Sharing a distribution experiment costs you nothing socially — you're not asking anyone for a favour. This is the lane most people are more comfortable with, and it's the one filmmakers reshare.&lt;/p&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="mission" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-01-hook.jpg" alt="Hook — you can put a movie in your theater" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Hook — you can put a movie in your theater&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="mission" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-02-the-old-way.jpg" alt="The old way — no festival, no sales agent" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;The old way — no festival, no sales agent&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="mission" data-i="2"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-03-mechanism.jpg" alt="How it actually works" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;How it actually works&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="mission" data-i="3"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-04-proof.jpg" alt="Proof — two finished films" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Proof — two finished films&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="mission" data-i="4"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-05-who.jpg" alt="Who is doing this" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Who is doing this&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="mission" data-i="5"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/mission-06-cta.jpg" alt="The ask" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;The ask&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class="hint"&gt;&lt;span&gt;💾&lt;/span&gt;&lt;div&gt;&lt;b&gt;On a phone:&lt;/b&gt; tap an image, then press and hold it → &lt;b&gt;Add to Photos&lt;/b&gt;. &lt;b&gt;On a computer:&lt;/b&gt; right-click → &lt;b&gt;Save image as&lt;/b&gt;.&lt;/div&gt;&lt;/div&gt;&lt;div class="cards"&gt;&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The short one&lt;/h3&gt;&lt;button class="copy" data-k="cap-mission-0"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-mission-0"&gt;You can put a movie in your local theater. That's it, that's the post.
+
+Two finished independent films are going out with no studio and no distributor — you put in your ZIP, it finds the actual independent cinema nearest you, and it writes the request for you. Twenty seconds.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The filmmaker one&lt;/h3&gt;&lt;button class="copy" data-k="cap-mission-1"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-mission-1"&gt;Every filmmaker I know has a finished film sitting on a drive.
+
+The only route most of them are offered is a festival run and a sales agent, and most never get either. So a couple of people are trying the other thing: ask the theaters directly, and let the audience be the reason.
+
+It's running in public right now, counts and all. Worth watching even if you never sign up.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The local one&lt;/h3&gt;&lt;button class="copy" data-k="cap-mission-2"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-mission-2"&gt;I want to see a real independent film play in &lt;mark&gt;{your city}&lt;/mark&gt; again.
+
+There's a thing running right now where you put in your ZIP, it matches you to the actual indie cinema nearest you, and it writes the request to their programmer for you. Takes twenty seconds and it's free.
+
+If enough of us in &lt;mark&gt;{your city}&lt;/mark&gt; do it, a real programmer looks at &lt;mark&gt;{your city}&lt;/mark&gt;. That's the whole mechanism.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The honest one&lt;/h3&gt;&lt;button class="copy" data-k="cap-mission-3"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-mission-3"&gt;This might not work. That's why I like it.
+
+Two independent features, no studio, no distributor, going straight at theaters and asking audiences to make the case. The numbers are public — including the cities that aren't working.
+
+I'd rather back something running the experiment in the open.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;One line, for a story or a reply&lt;/h3&gt;&lt;button class="copy" data-k="cap-mission-4"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-mission-4"&gt;You can put a movie in your local theater. Twenty seconds and a ZIP code → &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="lane-block" data-lane-block="films"&gt;&lt;h3 class="lane-heading"&gt;The films&lt;/h3&gt;&lt;p class="lane-why"&gt;Use this when the people you're talking to would genuinely watch these. It asks a little more of them, and it converts better when the audience is right.&lt;/p&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="films" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-01-hook.jpg" alt="Hook — you can put a movie in your theater" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Hook — you can put a movie in your theater&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-02-dead-dawn-poster.jpg" alt="Dead Dawn — poster" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Dead Dawn — poster&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="2"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-03-dead-dawn-still.jpg" alt="Dead Dawn — three frames" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Dead Dawn — three frames&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="3"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-04-dead-dawn-neon.jpg" alt="Dead Dawn — some secrets refuse to stay buried" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Dead Dawn — some secrets refuse to stay buried&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="4"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-05-silt-poster.jpg" alt="Silt — poster" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Silt — poster&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="5"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-06-silt-still.jpg" alt="Silt — three frames" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Silt — three frames&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="6"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-07-cast.jpg" alt="The cast across the two films" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;The cast across the two films&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="films" data-i="7"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/films-08-cta.jpg" alt="The ask" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;The ask&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class="hint"&gt;&lt;span&gt;💾&lt;/span&gt;&lt;div&gt;&lt;b&gt;On a phone:&lt;/b&gt; tap an image, then press and hold it → &lt;b&gt;Add to Photos&lt;/b&gt;. &lt;b&gt;On a computer:&lt;/b&gt; right-click → &lt;b&gt;Save image as&lt;/b&gt;.&lt;/div&gt;&lt;/div&gt;&lt;div class="cards"&gt;&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;Both films&lt;/h3&gt;&lt;button class="copy" data-k="cap-films-0"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-films-0"&gt;Two independent features I want in a theater near me.
+
+DEAD DAWN — a post office clerk everyone overlooks, and the morning something dark descends. Dark comedy, small-town true crime, a cult anti-hero at the middle of it.
+
+SILT — a lake house, a fractured group of friends, and whatever is living under the water.
+
+Nobody greenlit them. They were made anyway, and now they're being booked the same way — by asking. Put in your ZIP and it does the rest.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;Dead Dawn&lt;/h3&gt;&lt;button class="copy" data-k="cap-films-1"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-films-1"&gt;Anna-Beth is the post office clerk everyone overlooks. She can't say no to a bad customer, a worse boss, or the ex who won't let go — until something dark descends with the dawn and the woman nobody saw coming finds out exactly what she's capable of.
+
+DEAD DAWN. Ashley Lenz, Olivia Grace Applegate, Malcolm Goodwin, David Anders, Krishna Smitha, Michael Papajohn, Isaiah LaBorde. Produced by Isaiah LaBorde. Written and directed by Aaron Jay Rome.
+
+It's going to theaters without a studio. Your ZIP is the whole ask → &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;Silt&lt;/h3&gt;&lt;button class="copy" data-k="cap-films-2"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-films-2"&gt;A lake house. A fractured group of friends. A weekend that was supposed to fix everything. Old wounds have a way of surfacing — and whatever is living under that water knows exactly where to find them.
+
+SILT. Andrea Sixtos, David Anders, Malcolm Goodwin, Tommy Wiseau, Olivia Grace Applegate, Michael Papajohn, Vernon Davis, Krishna Smitha, Isaiah LaBorde.
+
+Story by Vernon Davis &amp;amp; Tiffany Toney. Produced by Isaiah LaBorde. Executive producer Vernon Davis. Written and directed by Aaron Jay Rome.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The cast hook&lt;/h3&gt;&lt;button class="copy" data-k="cap-films-3"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-films-3"&gt;Six actors appear in BOTH films: Malcolm Goodwin, Krishna Smitha, Olivia Grace Applegate, David Anders, Michael Papajohn and Isaiah LaBorde — who also produced both.
+
+Tommy Wiseau and Vernon Davis are in SILT, which Davis also executive produced.
+
+No studio, no distributor — they're being booked by audience request, one city at a time. Put in your ZIP and it writes the request for you.
+
+&lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;One line, for a story or a reply&lt;/h3&gt;&lt;button class="copy" data-k="cap-films-4"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="cap-films-4"&gt;Two indie features, no studio, going to theaters by request. Twenty seconds → &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section id="s4"&gt;&lt;div class="wrap"&gt;
+  &lt;div class="step-no"&gt;STEP 4&lt;/div&gt;
+  &lt;h2&gt;Send five messages&lt;/h2&gt;
+  &lt;p class="sub"&gt;This matters more than the post. A public post reaches people who scroll past it.
+    One message to one specific person who'd actually go is worth fifty of those.&lt;/p&gt;
+  &lt;div class="cards" id="c-dm"&gt;&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;Someone who'd genuinely see it&lt;/h3&gt;&lt;button class="copy" data-k="dm-0"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="dm-0"&gt;Hey — do you still go to the movies downtown? There's an indie feature trying to get booked in &lt;mark&gt;{your city}&lt;/mark&gt; and it takes twenty seconds to put your ZIP in and add your name to the ask. No money, no sign-up hell. &lt;mark&gt;{your link}&lt;/mark&gt; — would mean a lot if you did it.&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;A filmmaker friend&lt;/h3&gt;&lt;button class="copy" data-k="dm-1"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="dm-1"&gt;You'll find this interesting regardless of whether you sign up. Two finished features are being released by asking theaters directly instead of going the festival/sales-agent route, and the whole thing is running in public with the counts visible. &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;Somebody local with a following&lt;/h3&gt;&lt;button class="copy" data-k="dm-2"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="dm-2"&gt;Long shot — I'm helping get an independent film in front of a programmer in &lt;mark&gt;{your city}&lt;/mark&gt;. It works on volume of local requests, so one post from you would do more than a hundred from me. Happy to send you the images and caption ready to go. &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;Family / not-a-film-person&lt;/h3&gt;&lt;button class="copy" data-k="dm-3"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="dm-3"&gt;Doing a thing to get a movie into a theater here in &lt;mark&gt;{your city}&lt;/mark&gt;. It's genuinely twenty seconds — you put in your zip code and it writes an email to the local cinema for you. &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The follow-up, 3–4 days later&lt;/h3&gt;&lt;button class="copy" data-k="dm-4"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="dm-4"&gt;Hey, did the theater ever write back to you? If they did, could you forward it to team@demandthescreen.com? The reply goes to your inbox rather than ours, so that's the only way we see it — and a programmer replying is the most useful thing that happens all week.&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section id="s5"&gt;&lt;div class="wrap"&gt;
+  &lt;div class="step-no"&gt;IF THEY ASK&lt;/div&gt;
+  &lt;h2&gt;Who is this guy?&lt;/h2&gt;
+  &lt;p class="sub"&gt;You don't have to explain him. Send the card, or send the IMDb link, or paste the
+    paragraph. All three say the same thing.&lt;/p&gt;
+  &lt;div class="grid" id="g-aj" style="grid-template-columns:1fr"&gt;&lt;button class="tile" data-set="aj" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/aj-00-who-is-aj-rome.jpg" alt="Who made these — send this when someone asks" loading="lazy" width="1080" height="1350"&gt;&lt;span&gt;Who made these — send this when someone asks&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;div class="cards" id="c-aj" style="margin-top:14px"&gt;&lt;article class="card"&gt;&lt;div class="card-h"&gt;&lt;h3&gt;The paragraph, if they want words&lt;/h3&gt;&lt;button class="copy" data-k="aj-0"&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class="card-b" data-body="aj-0"&gt;Aaron Jay Rome (AJ) — writer-director, Roaming Lens Films. Directing credits: Go Crazy Go Mad, End Trip, and the two features in this campaign, Dead Dawn and Silt. He also appears as an actor in Tom McCarthy's A Statement.
+
+IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
+  &lt;div class="two" id="films-two"&gt;&lt;div class="film"&gt;&lt;h3&gt;Dead Dawn&lt;/h3&gt;&lt;div class="genre"&gt;Dark comedy · Small-town true crime · Cult anti-hero&lt;/div&gt;&lt;p&gt;Anna-Beth is the post office clerk everyone overlooks. She can't say no to a bad customer, a worse boss, or the controlling ex who won't let go — until something dark descends with the dawn and the woman nobody saw coming discovers exactly what she's capable of.&lt;/p&gt;&lt;p class="cast"&gt;Ashley Lenz · Olivia Grace Applegate · Malcolm Goodwin · David Anders · Krishna Smitha · Michael Papajohn · Isaiah LaBorde&lt;/p&gt;&lt;p class="cast" style="margin-top:8px"&gt;Produced by Isaiah LaBorde · Written and directed by Aaron Jay Rome&lt;/p&gt;&lt;p style="margin:12px 0 0"&gt;&lt;a href="https://www.imdb.com/title/tt35397180/" target="_blank" rel="noopener"&gt;★ View on IMDb&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class="film"&gt;&lt;h3&gt;Silt&lt;/h3&gt;&lt;div class="genre"&gt;Cosmic thriller · Cabin-in-the-woods · Elevated horror&lt;/div&gt;&lt;p&gt;A lake house. A fractured group of friends. A weekend that was supposed to fix everything. Old wounds have a way of surfacing — and whatever is living under that water knows exactly where to find them.&lt;/p&gt;&lt;p class="cast"&gt;Andrea Sixtos · David Anders · Malcolm Goodwin · Tommy Wiseau · Olivia Grace Applegate · Michael Papajohn · Vernon Davis · Krishna Smitha · Isaiah LaBorde&lt;/p&gt;&lt;p class="cast" style="margin-top:8px"&gt;Story by Vernon Davis &amp;amp; Tiffany Toney · Produced by Isaiah LaBorde · Executive producer Vernon Davis · Written and directed by Aaron Jay Rome&lt;/p&gt;&lt;p style="margin:12px 0 0"&gt;&lt;a href="https://www.imdb.com/title/tt35855318/" target="_blank" rel="noopener"&gt;★ View on IMDb&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section id="s6"&gt;&lt;div class="wrap"&gt;
+  &lt;div class="step-no"&gt;THE REST&lt;/div&gt;
+  &lt;h2&gt;Stills, posters, behind the scenes&lt;/h2&gt;
+  &lt;p class="sub"&gt;For when you want to make something of your own, or someone asks what the films
+    actually look like.&lt;/p&gt;
+  &lt;div class="lanes" role="tablist"&gt;
+    &lt;button class="lane" role="tab" data-bin="stills" aria-selected="true"&gt;Stills&lt;/button&gt;
+    &lt;button class="lane" role="tab" data-bin="posters" aria-selected="false"&gt;Posters&lt;/button&gt;
+    &lt;button class="lane" role="tab" data-bin="bts" aria-selected="false"&gt;On set&lt;/button&gt;
+    &lt;button class="lane" role="tab" data-bin="stories" aria-selected="false"&gt;Stories&lt;/button&gt;
+    &lt;button class="lane" role="tab" data-bin="square" aria-selected="false"&gt;Square&lt;/button&gt;
+  &lt;/div&gt;
+&lt;section class="bin-block" data-bin-block="stills"&gt;&lt;h3 class="lane-heading"&gt;Stills&lt;/h3&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="stills" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-post-office-antlers-001.jpg" alt="Anna Beth Post Office Antlers 001" loading="lazy" width="1080" height="454"&gt;&lt;span&gt;Anna Beth Post Office Antlers 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-red-cu.jpg" alt="Anna Beth Red CU" loading="lazy" width="1080" height="455"&gt;&lt;span&gt;Anna Beth Red CU&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="2"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-trappers-001.jpg" alt="Anna Beth Trappers 001" loading="lazy" width="1080" height="455"&gt;&lt;span&gt;Anna Beth Trappers 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="3"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-dawn-tesla-001.jpg" alt="Dawn Tesla 001" loading="lazy" width="1080" height="454"&gt;&lt;span&gt;Dawn Tesla 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="4"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-javier-trappers-001.jpg" alt="Javier Trappers 001" loading="lazy" width="1080" height="454"&gt;&lt;span&gt;Javier Trappers 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="5"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-bartleby-lake-001.jpg" alt="Bartleby Lake 001" loading="lazy" width="1080" height="451"&gt;&lt;span&gt;Bartleby Lake 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="6"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-group-lake-breakfast.jpg" alt="Group Lake Breakfast" loading="lazy" width="1080" height="454"&gt;&lt;span&gt;Group Lake Breakfast&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="7"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-cheers-001.jpg" alt="Hadria Cheers 001" loading="lazy" width="1080" height="455"&gt;&lt;span&gt;Hadria Cheers 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="8"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-deep-focus-001.jpg" alt="Hadria Deep Focus 001" loading="lazy" width="1080" height="451"&gt;&lt;span&gt;Hadria Deep Focus 001&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stills" data-i="9"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-mike-lake-001.jpg" alt="Mike Lake 001" loading="lazy" width="1080" height="450"&gt;&lt;span&gt;Mike Lake 001&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="bin-block" data-bin-block="posters"&gt;&lt;h3 class="lane-heading"&gt;Posters&lt;/h3&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="posters" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/posters-deaddawn-poster-b-dawn-alone.jpg" alt="Dead Dawn — poster B dawn alone" loading="lazy" width="843" height="1280"&gt;&lt;span&gt;Dead Dawn — poster B dawn alone&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="posters" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/posters-silt-poster-a-floating-teal.jpg" alt="Silt — poster A floating teal" loading="lazy" width="843" height="1280"&gt;&lt;span&gt;Silt — poster A floating teal&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="bin-block" data-bin-block="bts"&gt;&lt;h3 class="lane-heading"&gt;On set&lt;/h3&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="bts" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-01-video-village.jpg" alt="On set — video village" loading="lazy" width="1080" height="810"&gt;&lt;span&gt;On set — video village&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-02-camera-setup.jpg" alt="On set — camera setup" loading="lazy" width="1080" height="1920"&gt;&lt;span&gt;On set — camera setup&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="2"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-03-police-station-crew.jpg" alt="On set — police station crew" loading="lazy" width="1080" height="608"&gt;&lt;span&gt;On set — police station crew&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="3"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-04-night-fog-crew.jpg" alt="On set — night fog crew" loading="lazy" width="1080" height="1920"&gt;&lt;span&gt;On set — night fog crew&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="4"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-05-trappers-neon-night.jpg" alt="On set — trappers neon night" loading="lazy" width="1080" height="566"&gt;&lt;span&gt;On set — trappers neon night&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="5"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-06-slate-dead-dawn.jpg" alt="On set — slate dead dawn" loading="lazy" width="1080" height="608"&gt;&lt;span&gt;On set — slate dead dawn&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="6"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-07-trappers-night-rig.jpg" alt="On set — trappers night rig" loading="lazy" width="1080" height="745"&gt;&lt;span&gt;On set — trappers night rig&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="7"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-08-camera-dolly-bar.jpg" alt="On set — camera dolly bar" loading="lazy" width="1080" height="1920"&gt;&lt;span&gt;On set — camera dolly bar&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="8"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-09-arri-rig.jpg" alt="On set — arri rig" loading="lazy" width="1080" height="810"&gt;&lt;span&gt;On set — arri rig&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="9"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-10-crew-on-set.jpg" alt="On set — crew on set" loading="lazy" width="1080" height="810"&gt;&lt;span&gt;On set — crew on set&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="bts" data-i="10"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/bts-bts-11-deer-and-camera.jpg" alt="On set — deer and camera" loading="lazy" width="1080" height="608"&gt;&lt;span&gt;On set — deer and camera&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="bin-block" data-bin-block="stories"&gt;&lt;h3 class="lane-heading"&gt;Stories&lt;/h3&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="stories" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/stories-01-mission-story.jpg" alt="Story — the mission" loading="lazy" width="1080" height="1920"&gt;&lt;span&gt;Story — the mission&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stories" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/stories-02-films-story.jpg" alt="Story — the films" loading="lazy" width="1080" height="1920"&gt;&lt;span&gt;Story — the films&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="stories" data-i="2"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/stories-03-cta-story.jpg" alt="Story — plain CTA (room for a link sticker)" loading="lazy" width="1080" height="1920"&gt;&lt;span&gt;Story — plain CTA (room for a link sticker)&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class="bin-block" data-bin-block="square"&gt;&lt;h3 class="lane-heading"&gt;Square&lt;/h3&gt;&lt;div class="grid"&gt;&lt;button class="tile" data-set="square" data-i="0"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/square-01-mission-square.jpg" alt="Square — the mission" loading="lazy" width="1080" height="1080"&gt;&lt;span&gt;Square — the mission&lt;/span&gt;&lt;/button&gt;
+&lt;button class="tile" data-set="square" data-i="1"&gt;&lt;img src="https://aaronjayrome.github.io/dts-creative-kit/images/square-02-films-square.jpg" alt="Square — the films" loading="lazy" width="1080" height="1080"&gt;&lt;span&gt;Square — the films&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;/div&gt;&lt;/section&gt;
+
+&lt;section id="s7"&gt;&lt;div class="wrap"&gt;
+  &lt;div class="step-no"&gt;QUESTIONS YOU'LL GET&lt;/div&gt;
+  &lt;h2&gt;Answers, so you don't have to improvise&lt;/h2&gt;
+  &lt;div id="faq" style="margin-top:18px"&gt;&lt;details&gt;&lt;summary&gt;Does this cost anything?&lt;/summary&gt;&lt;p&gt;No. No ticket, no card, no donation. You put in a ZIP code.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Is this a Kickstarter?&lt;/summary&gt;&lt;p&gt;No. Both films are finished. This is only about getting them onto screens.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;What happens after I put my ZIP in?&lt;/summary&gt;&lt;p&gt;It matches you to the real independent cinema nearest you and writes an email to their programmer, from your own inbox, that you can read and edit before it sends.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Will it definitely play near me?&lt;/summary&gt;&lt;p&gt;No promises. Enough requests from one city and a real programmer takes a look — that's what we can honestly say. Some cities are working, some aren't, and the counts are public either way.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;What if there's no indie theater near me?&lt;/summary&gt;&lt;p&gt;You get banked for your area rather than pointed at a venue that can't take part.&lt;/p&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Why not just put it on streaming?&lt;/summary&gt;&lt;p&gt;It'll get there. Theatrical first is the point of the experiment — the argument is that an audience can open a screen without a studio deciding first.&lt;/p&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;div class="dont"&gt;
+    &lt;h3 style="font-size:15px; letter-spacing:.1em; margin-bottom:14px"&gt;Four things not to say&lt;/h3&gt;
+    &lt;ul style="margin:0; padding-left:20px"&gt;
+      &lt;li&gt;&lt;span class="x"&gt;✕&lt;/span&gt;&lt;b&gt;"The studios passed on these."&lt;/b&gt; They never went to studios.
+        That's the entire point — you don't need one. Say &lt;b&gt;no studio required&lt;/b&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;span class="x"&gt;✕&lt;/span&gt;&lt;b&gt;"Get 30 people and the theater books it."&lt;/b&gt; We don't promise
+        the booking. Enough people ask and a real programmer looks — and a city can open other ways
+        too.&lt;/li&gt;
+      &lt;li&gt;&lt;span class="x"&gt;✕&lt;/span&gt;&lt;b&gt;"Tommy Wiseau and Vernon Davis are in both films."&lt;/b&gt;
+        They are only in &lt;i&gt;Silt&lt;/i&gt;. The six who appear in &lt;b&gt;both&lt;/b&gt;: Malcolm Goodwin,
+        Krishna Smitha, Olivia Grace Applegate, David Anders, Michael Papajohn, Isaiah LaBorde.&lt;/li&gt;
+      &lt;li&gt;&lt;span class="x"&gt;✕&lt;/span&gt;&lt;b&gt;"Horror double feature."&lt;/b&gt; &lt;i&gt;Dead Dawn&lt;/i&gt; is dark comedy and
+        small-town true crime; &lt;i&gt;Silt&lt;/i&gt; is a cosmic thriller. Calling them horror brings horror
+        fans expecting something else.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;&lt;div class="wrap"&gt;
+  &lt;p&gt;&lt;b style="color:var(--text)"&gt;Something missing, or an image you want that isn't here?&lt;/b&gt;
+     Reply to the email this link came in, or write to
+     &lt;a href="mailto:team@demandthescreen.com"&gt;team@demandthescreen.com&lt;/a&gt;.&lt;/p&gt;
+  &lt;p style="margin-top:14px"&gt;And if a theater writes back to you — &lt;b style="color:var(--gold)"&gt;forward
+     it to team@demandthescreen.com&lt;/b&gt;. The reply lands in your inbox, not ours, so that's the only
+     way we ever see it.&lt;/p&gt;
+  &lt;p style="margin-top:18px" class="mono"&gt;Demand the Screen · Roaming Lens Films ·
+     &lt;a href="https://demandthescreen.com"&gt;demandthescreen.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/footer&gt;
+
+&lt;div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Full size image"&gt;
+  &lt;img id="lb-img" alt=""&gt;
+  &lt;p id="lb-cap"&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;Press and hold the image → Add to Photos.&lt;/b&gt; On a computer, right-click → Save image as.&lt;/p&gt;
+  &lt;button id="lb-x"&gt;Close&lt;/button&gt;
+&lt;/div&gt;
+&lt;script src="https://aaronjayrome.github.io/dts-creative-kit/kit.js"&gt;&lt;/script&gt;
+</textarea>
+<p class="n">Generated 2026-09-01 &middot; 41 KB &middot; regenerate with
+<code>build_ghl.py</code></p>
+</div>
+<script>
+var t=document.getElementById("t"),c=document.getElementById("c"),m=document.getElementById("msg");
+c.onclick=function(){
+  t.select(); t.setSelectionRange(0,t.value.length);
+  navigator.clipboard.writeText(t.value).then(function(){
+    c.textContent="Copied"; c.classList.add("done"); m.textContent=t.value.length+" characters";
+    setTimeout(function(){c.textContent="Copy all";c.classList.remove("done");},2200);
+  }).catch(function(){ document.execCommand("copy"); m.textContent="Selected — press Cmd+C"; });
+};
+document.getElementById("s").onclick=function(){ t.focus(); t.select(); m.textContent="Press Cmd+C"; };
+</script></body></html>
