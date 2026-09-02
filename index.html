@@ -70,6 +70,15 @@ h1 em{font-style:normal; color:var(--gold); display:block}
 .field input::placeholder{color:#55555C}
 .setup-note{width:100%; font-size:12.5px; color:var(--muted-2); margin-top:9px}
 .setup-note b{color:var(--gold); font-weight:600}
+#setup-ok{color:var(--ok)}
+#setup-ok b{color:var(--ok)}
+.where{border:0; padding:6px 0 0}
+.where summary{font-size:12.5px; color:var(--gold); font-weight:600}
+.where summary::before{content:"?"; color:var(--gold); font-family:"IBM Plex Mono";
+  margin-right:8px; font-weight:600}
+.where[open] summary::before{content:"×"}
+.where p{color:var(--muted); font-size:13px; margin:8px 0 0 22px; line-height:1.55}
+.where .mono{color:var(--text); font-family:"IBM Plex Mono"; font-size:12.5px}
 
 /* ----------------------------------------------------------------- steps */
 section{padding:44px 0; border-bottom:1px solid var(--line-soft)}
@@ -191,17 +200,29 @@ body.js-on .setup{display:block}
   <div class="wrap">
     <div class="setup-row">
       <div class="field">
-        <label for="f-link">Your referral link</label>
-        <input id="f-link" type="url" inputmode="url" spellcheck="false"
-               placeholder="https://demandthescreen.com/demand-page?ref=XXXXXX">
+        <label for="f-link">Your link or your 6-character code</label>
+        <input id="f-link" type="text" inputmode="text" spellcheck="false" autocapitalize="characters"
+               placeholder="21E848  —  or paste the whole link">
       </div>
       <div class="field">
         <label for="f-city">Your city</label>
         <input id="f-city" type="text" placeholder="Dallas">
       </div>
     </div>
+    <p class="setup-note" id="setup-ok" hidden></p>
     <p class="setup-note">Fill these in once and <b>every caption below fills itself in</b> —
       no brackets left to edit. Saved on this device only.</p>
+    <details class="where">
+      <summary>Where do I find my link?</summary>
+      <p><b>It came in your kit email</b> — the line beginning
+      <span class="mono">demandthescreen.com/demand-page?ref=</span> followed by six characters.
+      You can paste the whole link, or just those six characters.</p>
+      <p><b>Lost it?</b> Go to <a href="https://demandthescreen.com/kit" target="_blank"
+      rel="noopener">demandthescreen.com/kit</a> and put in the email address you signed up with —
+      it will send your link straight back to you.</p>
+      <p>Still stuck? Reply to the email this came in, or write to
+      <a href="mailto:team@demandthescreen.com">team@demandthescreen.com</a> and we will dig it out.</p>
+    </details>
   </div>
 </div>
 
@@ -418,9 +439,43 @@ const store = {
   get(k, d){ try { return localStorage.getItem(k) ?? d; } catch(e){ return d; } },
   set(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
 };
-const linkEl = $("#f-link"), cityEl = $("#f-city");
-if (linkEl) linkEl.value = store.get("dts_link", "");
+const linkEl = $("#f-link"), cityEl = $("#f-city"), okEl = $("#setup-ok");
+const SHARE = "https://demandthescreen.com/demand-page?ref=";
+
+/* Nobody should have to know what a "referral link" is or where it lives.
+   Priority: the ?ref= the email put in the URL, then whatever is remembered on
+   this device. Either a bare 6-character code or a whole link is accepted. */
+function codeFrom(v){
+  const m = String(v || "").toUpperCase().match(/\b([0-9A-F]{6})\b/);
+  return m ? m[1] : null;
+}
+function resolveLink(){
+  const raw = (linkEl && linkEl.value.trim()) || "";
+  const code = codeFrom(raw);
+  if (code) return SHARE + code;
+  return /^https?:\/\//i.test(raw) ? raw : "";
+}
+function markResolved(){
+  if (!okEl) return;
+  const url = resolveLink();
+  if (url){
+    okEl.hidden = false;
+    okEl.innerHTML = "Using <b>" + esc(url) + "</b> in every caption below.";
+  } else {
+    okEl.hidden = true;
+  }
+}
+
+const qs = new URLSearchParams(location.search);
+const fromUrl = qs.get("ref") || qs.get("c") || qs.get("code") || "";
+if (linkEl){
+  const remembered = store.get("dts_link", "");
+  linkEl.value = fromUrl ? (codeFrom(fromUrl) || fromUrl) : remembered;
+  if (fromUrl) store.set("dts_link", linkEl.value);
+}
 if (cityEl) cityEl.value = store.get("dts_city", "");
+const cityFromUrl = qs.get("city");
+if (cityFromUrl && cityEl){ cityEl.value = cityFromUrl; store.set("dts_city", cityFromUrl); }
 
 function esc(s){ return String(s).replace(/[&<>"]/g,
   c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
@@ -429,7 +484,7 @@ function esc(s){ return String(s).replace(/[&<>"]/g,
    Anything still unfilled stays highlighted, so a placeholder cannot quietly
    reach a real post. */
 function fill(t){
-  const link = (linkEl && linkEl.value.trim()) || "{your link}";
+  const link = resolveLink() || "{your link}";
   const city = (cityEl && cityEl.value.trim()) || "{your city}";
   return esc(t.replace(/\{LINK\}/g, link).replace(/\{CITY\}/g, city))
            .replace(/\{your (link|city)\}/g, m => "<mark>" + m + "</mark>");
@@ -488,11 +543,12 @@ document.addEventListener("keydown", function(e){
 });
 [linkEl, cityEl].forEach(el => el && el.addEventListener("input", function(){
   store.set("dts_link", linkEl.value); store.set("dts_city", cityEl.value);
-  paint();
+  paint(); markResolved();
 }));
 
 showLane("mission");
 showBin("stills");
 paint();
+markResolved();
 </script>
 
