@@ -43,6 +43,7 @@ no file hunting.</p>
 <button class="nav" data-go="email-personal">Cast, crew &amp; investors — SEND FROM GMAIL</button>
 <button class="nav" data-go="email-company">Cast, crew &amp; investors — theaters + stills (GHL version)</button>
 <button class="nav" data-go="email-ogf">OGF follow-up — Day 8 of 90</button>
+<button class="nav" data-go="sql-fix-kit">SQL — FIX the cast/crew kit (RUN NOW)</button>
 <button class="nav" data-go="sql-ogf-kit">SQL — fill the OGF kit (RUN BEFORE SENDING)</button>
 <button class="nav" data-go="email-captain">Captain code recovery email</button>
 <button class="nav" data-go="roster">Send roster — 81 people</button></nav>
@@ -1022,6 +1023,79 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
 &lt;/table&gt;
 </textarea>
   <iframe class="prev hide" data-prev="email-ogf" sandbox="allow-same-origin"></iframe>
+</section>
+
+<section class="item hide" id="sql-fix-kit">
+  <h2>SQL — FIX the cast/crew kit (RUN NOW)</h2>
+  <p class="where">Supabase SQL editor, dts-prod. AJ and Gene are on silt-dead-dawn, which still has the August assets.</p>
+  <div class="bar">
+    <button class="copy" data-for="sql-fix-kit">Copy all</button>
+    <button class="ghost sel" data-for="sql-fix-kit">Select all</button>
+    
+    <span class="msg"></span>
+    <span class="size">5.8 KB</span>
+  </div>
+  <textarea readonly spellcheck="false" data-code="sql-fix-kit">-- ============================================================
+-- FIX: the CAST/CREW asset set was never updated  ·  2026-09-02
+--
+-- Found because AJ, Jack and Gene compared kits and only Jack&#x27;s had the
+-- new work. The reason:
+--     Jack  21E848  asset_set = ogf-2026        -&gt; 27 assets  (populated)
+--     AJ    C182D7  asset_set = silt-dead-dawn  -&gt;  9 assets  (August set)
+--     Gene  9163D2  asset_set = silt-dead-dawn  -&gt;  9 assets  (August set)
+--
+-- Last night&#x27;s SQL populated ogf-2026 only. &#x27;silt-dead-dawn&#x27; still holds the
+-- original nine: five text-only carousel slides, a story frame and two
+-- posters, all on GHL&#x27;s filesafe.space CDN. That is the kit as it was in
+-- August - none of the stills, none of the image-led slides.
+--
+-- This gives the cast/crew set the same 27 assets. Captions are NOT touched:
+-- the two sets have different captions on purpose and those stay as they are.
+--
+-- SAFE TO RE-RUN. Only released week-1 stills are included.
+-- ============================================================
+
+begin;
+
+delete from dts_kit_assets where set_slug = &#x27;silt-dead-dawn&#x27;;
+
+insert into dts_kit_assets (set_slug, sort, name, note, url, width, height) values
+  (&#x27;silt-dead-dawn&#x27;, 10, &#x27;Still · Anna Beth Post Office Antlers 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-post-office-antlers-001.jpg&#x27;, 1080, 454),
+  (&#x27;silt-dead-dawn&#x27;, 20, &#x27;Still · Anna Beth Red Cu&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-red-cu.jpg&#x27;, 1080, 455),
+  (&#x27;silt-dead-dawn&#x27;, 30, &#x27;Still · Anna Beth Trappers 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-trappers-001.jpg&#x27;, 1080, 455),
+  (&#x27;silt-dead-dawn&#x27;, 40, &#x27;Still · Bartleby Lake 001&#x27;, &#x27;1080 x 451&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-bartleby-lake-001.jpg&#x27;, 1080, 451),
+  (&#x27;silt-dead-dawn&#x27;, 50, &#x27;Still · Dawn Tesla 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-dawn-tesla-001.jpg&#x27;, 1080, 454),
+  (&#x27;silt-dead-dawn&#x27;, 60, &#x27;Still · Group Lake Breakfast&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-group-lake-breakfast.jpg&#x27;, 1080, 454),
+  (&#x27;silt-dead-dawn&#x27;, 70, &#x27;Still · Hadria Cheers 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-cheers-001.jpg&#x27;, 1080, 455),
+  (&#x27;silt-dead-dawn&#x27;, 80, &#x27;Still · Hadria Deep Focus 001&#x27;, &#x27;1080 x 451&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-deep-focus-001.jpg&#x27;, 1080, 451),
+  (&#x27;silt-dead-dawn&#x27;, 90, &#x27;Still · Javier Trappers 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-javier-trappers-001.jpg&#x27;, 1080, 454),
+  (&#x27;silt-dead-dawn&#x27;, 100, &#x27;Still · Mike Lake 001&#x27;, &#x27;1080 x 450&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-mike-lake-001.jpg&#x27;, 1080, 450),
+  (&#x27;silt-dead-dawn&#x27;, 110, &#x27;Post · 01 Hook&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-01-hook.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 120, &#x27;Post · 02 Dead Dawn Poster&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-02-dead-dawn-poster.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 130, &#x27;Post · 03 Dead Dawn Still&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-03-dead-dawn-still.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 140, &#x27;Post · 04 Dead Dawn Neon&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-04-dead-dawn-neon.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 150, &#x27;Post · 05 Silt Poster&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-05-silt-poster.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 160, &#x27;Post · 06 Silt Still&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-06-silt-still.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 170, &#x27;Post · 07 Cast&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-07-cast.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 180, &#x27;Post · 08 Cta&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-08-cta.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 190, &#x27;Post · 01 Hook&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-01-hook.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 200, &#x27;Post · 02 The Old Way&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-02-the-old-way.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 210, &#x27;Post · 03 Mechanism&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-03-mechanism.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 220, &#x27;Post · 04 Proof&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-04-proof.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 230, &#x27;Post · 05 Who&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-05-who.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 240, &#x27;Post · 06 Cta&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/mission-06-cta.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 250, &#x27;Card · 00 Who Is Rome&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/aj-00-who-is-aj-rome.jpg&#x27;, 1080, 1350),
+  (&#x27;silt-dead-dawn&#x27;, 260, &#x27;Poster · Deaddawn Poster B Dawn Alone&#x27;, &#x27;843 x 1280&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/posters-deaddawn-poster-b-dawn-alone.jpg&#x27;, 843, 1280),
+  (&#x27;silt-dead-dawn&#x27;, 270, &#x27;Poster · Silt Poster A Floating Teal&#x27;, &#x27;843 x 1280&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/posters-silt-poster-a-floating-teal.jpg&#x27;, 843, 1280);
+
+commit;
+
+-- verify: all three should now report the same number
+select &#x27;AJ&#x27;   as who, json_array_length(dts_kit(&#x27;C182D7&#x27;) -&gt; &#x27;assets&#x27;) as assets
+union all select &#x27;Gene&#x27;, json_array_length(dts_kit(&#x27;9163D2&#x27;) -&gt; &#x27;assets&#x27;)
+union all select &#x27;Jack&#x27;, json_array_length(dts_kit(&#x27;21E848&#x27;) -&gt; &#x27;assets&#x27;);
+</textarea>
+  
 </section>
 
 <section class="item hide" id="sql-ogf-kit">
