@@ -36,7 +36,8 @@ code{color:var(--gold);font-family:"IBM Plex Mono",ui-monospace,monospace;font-s
 <h1>Paste board</h1>
 <p class="sub">Everything paste-ready, always current. Pick one, hit Copy. Bookmark this page &mdash;
 no file hunting.</p>
-<nav><button class="nav on" data-go="email-reactivate">Email — the 186 who never sent (SEND TODAY)</button>
+<nav><button class="nav on" data-go="email-compete">1. Email — what the captains are competing for (SEND)</button>
+<button class="nav" data-go="email-reactivate">2. Email — the 186 who never sent (SEND)</button>
 <button class="nav" data-go="sql-kit-assets">SQL — every kit, every audience (re-run: week 2 is out, 53 assets)</button>
 <button class="nav" data-go="bundle-2616">Bundle 26.16 — LIVE since 2026-09-04, kept for rollback</button>
 <button class="nav" data-go="model">The audience model — read this one</button>
@@ -45,7 +46,7 @@ no file hunting.</p>
 <button class="nav" data-go="auto-1a">5. Automated: 1A matched theater (now has the kit)</button>
 <button class="nav" data-go="auto-1b">6. Automated: 1B banked (now has the kit)</button>
 <button class="nav" data-go="auto-day2">7. Automated: day-2 nudge (now has the kit)</button>
-<button class="nav" data-go="ghl-page">GHL page body — /creative-kit</button>
+<button class="nav" data-go="ghl-page">3. GHL page body — REPASTE (week 2 stills + the prize board)</button>
 <button class="nav" data-go="email-recovery">Recovery email body</button>
 <button class="nav" data-go="email-send">The main send — link + kit (now points at THEIR kit)</button>
 <button class="nav" data-go="email-nolink">Kit email — no personal link (supporters + OGF)</button>
@@ -54,8 +55,121 @@ no file hunting.</p>
 <button class="nav" data-go="email-ogf">OGF follow-up — Day 8 of 90</button>
 <button class="nav" data-go="email-captain">Captain code recovery email</button></nav>
 
-<section class="item" id="email-reactivate">
-  <h2>Email — the 186 who never sent (SEND TODAY)</h2>
+<section class="item" id="email-compete">
+  <h2>1. Email — what the captains are competing for (SEND)</h2>
+  <p class="where">GHL campaign, DTS location, EVERYONE. The &#x27;which one are you&#x27; block is what makes a whole-list send safe. Subject: Somebody is going to introduce this film from a stage.</p>
+  <div class="bar">
+    <button class="copy" data-for="email-compete">Copy all</button>
+    <button class="ghost sel" data-for="email-compete">Select all</button>
+    <button class="ghost tog" data-for="email-compete">View rendered</button>
+    <span class="msg"></span>
+    <span class="size">10.7 KB</span>
+  </div>
+  <textarea readonly spellcheck="false" data-code="email-compete">&lt;!-- EMAIL-WHAT-YOURE-COMPETING-FOR  -  2026-09-10  (day 16 of 90)
+
+     AJ: &quot;We need to make the announcement of what the captains are competing
+     for, so they actually have incentive to go do any of this. We need to make
+     it blatantly clear who is who, who&#x27;s competing for what, and what they
+     should do next.&quot;
+
+     EVERY REWARD IS FROM 2026-08-21_TIERS-SOURCE-OF-TRUTH.md, APPROVED BY AJ.
+     Nothing invented. Two deliberate omissions:
+       - NO Bronze/Silver/Gold. Those badges live in Skool and the Skool is
+         still empty. The tiers doc&#x27;s own warning: sequence it before any
+         captain-facing copy ships.
+       - NO presale ticket ladder. It needs Stripe (punch list #22) and tickets
+         are not on sale. This campaign has already announced things before
+         they existed; not doing it a fourth time.
+
+     WHY IT LEADS WITH THE DATE. On 2026-08-21 this ladder was abstract. It is
+     now 15 days from a real screening in a real building, so &quot;introduce the
+     film from the stage&quot; stops being a concept and becomes Friday 25 September
+     at the Lyric. Concrete and dated beats generous and vague.
+
+     AUDIENCE: everyone. The &quot;which one are you&quot; block is what makes that safe -
+     a supporter who reads it is told to do the twenty-second thing, not made to
+     feel they are losing a competition they never entered.
+
+     Pure ASCII, entities only. Merge tag: {{contact.first_name}} --&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;margin:0;padding:0;&quot;&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;padding:32px 16px;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Roboto,Helvetica,Arial,sans-serif;&quot;&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:560px;margin:0 auto;background:#0f0f0f;&quot;&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;
+&lt;div style=&quot;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8b8b8b;font-weight:900;&quot;&gt;DEMAND &lt;span style=&quot;color:#efc417;&quot;&gt;THE SCREEN&lt;/span&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 8px;&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:29px;line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;font-weight:900;color:#ffffff;&quot;&gt;Somebody is going to introduce this film from a stage.&lt;/h1&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.35;font-weight:800;color:#efc417;&quot;&gt;It will be whoever brought the most people to that room. That is the competition, and it starts now.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;{{contact.first_name}} &amp;mdash; there is a real room, on a real date, and someone is going to walk out in front of it. It cannot be bought and there is exactly one per city.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Here is everything that is on the table, and which parts are yours.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;First &amp;mdash; which one are you?&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:15.5px;line-height:1.6;color:#d6d6d6;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Cast &amp;amp; crew&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;You are not competing. Your names go on the pre-show slate, on a real cinema screen, in front of a paying audience.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Filmmakers&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;You came in through One Grand Film. You are here for the &lt;strong style=&quot;color:#ffffff;&quot;&gt;model&lt;/strong&gt; &amp;mdash; whether an audience can open a screen without a studio.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#efc417;&quot;&gt;Captains&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;&lt;strong style=&quot;color:#efc417;&quot;&gt;This is your competition.&lt;/strong&gt; The scoreboard is already running and it goes out twice a week.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Supporters&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;One thing is asked of you and it takes twenty seconds. It is at the bottom of this email.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;The ladder&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 16px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:15.5px;line-height:1.65;color:#d6d6d6;&quot;&gt;Same rungs for everyone. At each one you choose your side &amp;mdash; &lt;strong style=&quot;color:#ffffff;&quot;&gt;the filmmaker track&lt;/strong&gt; if you are building something of your own, &lt;strong style=&quot;color:#ffffff;&quot;&gt;the fan track&lt;/strong&gt; if you are not. &lt;strong style=&quot;color:#ffffff;&quot;&gt;Nobody has to want a film career to win the best prize on this board.&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:15px;line-height:1.6;color:#d6d6d6;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:8px 0;border-bottom:1px solid #242424;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Claim a kit&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:#c2c2c2;font-size:14.5px;&quot;&gt;Your own tracked link and a place on the leaderboard. Filmmakers: One Grand Film community access.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:8px 0;border-bottom:1px solid #242424;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;10 people&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:#c2c2c2;font-size:14.5px;&quot;&gt;Your name on the thank-you reel that plays before the film. Filmmakers: Festival Guide + Outreach Templates.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:8px 0;border-bottom:1px solid #242424;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;30 &amp;mdash; your city opens&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:#c2c2c2;font-size:14.5px;&quot;&gt;A ticket to the screening you unlocked. Filmmakers: the Lead Domino Film Academy, which sells for about $500.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:8px 0;border-bottom:1px solid #242424;&quot;&gt;&lt;strong style=&quot;color:#efc417;&quot;&gt;Top captain in a city that opens&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:#c2c2c2;font-size:14.5px;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;You introduce the film from the stage that night.&lt;/strong&gt; Filmmakers: a private Q&amp;amp;A with the cast of both films.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:8px 0;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Top 50 campaign-wide&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:#c2c2c2;font-size:14.5px;&quot;&gt;A signed poster and a custom plaque, signed by the cast and crew.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p style=&quot;margin:14px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;The currency is people who sign up through &lt;em&gt;your&lt;/em&gt; link and then actually send the email to their theater. Signups are the score; sent emails are what a programmer counts.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;What to do next&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;
+&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:15.5px;line-height:1.6;color:#d6d6d6;&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Cast &amp;amp; crew&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;Send your link to five people who would genuinely turn up. Your networks outperform everyone else&amp;rsquo;s here and it is not close.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Filmmakers&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;Post the mechanism, not the films. Your people care that this might be their route too, and the captions are already written that way.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#efc417;&quot;&gt;Captains&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;One image, one caption, posted with your link today. Then five personal messages. That is the entire job.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:9px 12px 9px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Supporters&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:9px 0;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Send the demand email to your theater.&lt;/strong&gt; Twenty seconds, and it is the one thing that actually counts.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 12px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/creative-kit&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:17px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;See the board and get your images&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 26px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:14.5px;line-height:1.6;color:#8b8b8b;text-align:center;&quot;&gt;Already have a kit? It is at &lt;a href=&quot;https://demandthescreen.com/kit&quot; style=&quot;color:#8b8b8b;&quot;&gt;demandthescreen.com/kit&lt;/a&gt; &amp;mdash; and it now has twenty new frames in it.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;One honest note. &lt;strong style=&quot;color:#ffffff;&quot;&gt;The stage intro is the best thing on that list and it costs nothing.&lt;/strong&gt; That is deliberate. The prizes worth winning here are the ones that cannot be bought &amp;mdash; a room, a microphone, and your name in front of it.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 28px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.6;color:#d6d6d6;&quot;&gt;&amp;mdash; AJ Rome&lt;br&gt;&lt;span style=&quot;color:#8b8b8b;font-size:14px;&quot;&gt;Director, &lt;em&gt;Dead Dawn&lt;/em&gt; &amp;amp; &lt;em&gt;Silt&lt;/em&gt; &amp;middot; Roaming Lens Films&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:12px 24px 0;border-top:1px solid #2a2a2a;&quot;&gt;
+&lt;p style=&quot;margin:0;font-size:12px;line-height:1.6;color:#6f6f6f;&quot;&gt;Demand The Screen &amp;middot; Roaming Lens Films&lt;br&gt;Everything to post with, always current: &lt;a href=&quot;https://demandthescreen.com/creative-kit&quot; style=&quot;color:#8b8b8b;&quot;&gt;demandthescreen.com/creative-kit&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</textarea>
+  <iframe class="prev hide" data-prev="email-compete" sandbox="allow-same-origin"></iframe>
+</section>
+
+<section class="item hide" id="email-reactivate">
+  <h2>2. Email — the 186 who never sent (SEND)</h2>
   <p class="where">GHL campaign, DTS location, audience = sent_at IS NULL. One ask, no kit, no news.</p>
   <div class="bar">
     <button class="copy" data-for="email-reactivate">Copy all</button>
@@ -2837,14 +2951,14 @@ Concretely, from here:
 </section>
 
 <section class="item hide" id="ghl-page">
-  <h2>GHL page body — /creative-kit</h2>
+  <h2>3. GHL page body — REPASTE (week 2 stills + the prize board)</h2>
   <p class="where">GHL → the page at /creative-kit → Custom Code element. Replace everything.</p>
   <div class="bar">
     <button class="copy" data-for="ghl-page">Copy all</button>
     <button class="ghost sel" data-for="ghl-page">Select all</button>
     <button class="ghost tog" data-for="ghl-page">View rendered</button>
     <span class="msg"></span>
-    <span class="size">40.9 KB</span>
+    <span class="size">47.0 KB</span>
   </div>
   <textarea readonly spellcheck="false" data-code="ghl-page">&lt;title&gt;The Captain&#x27;s Kit&lt;/title&gt;
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
@@ -3078,6 +3192,8 @@ body.js-on .setup{display:block}
 &lt;/div&gt;
 
 &lt;main&gt;
+&lt;section id=&quot;s0&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;div style=&quot;background:rgba(239,196,23,.05);border:1px solid rgba(239,196,23,.35);border-radius:12px;padding:22px 20px;margin:0 0 26px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#EFC417;font-weight:900;margin:0 0 8px;&quot;&gt;What you are competing for&lt;/div&gt;&lt;h2 style=&quot;margin:0 0 6px;&quot;&gt;Somebody is going to walk on stage in Fort Collins on Friday 25 September and introduce this film.&lt;/h2&gt;&lt;p class=&quot;sub&quot; style=&quot;margin:0 0 4px;&quot;&gt;It will be whoever brought the most people to that room. That is the whole competition, it cannot be bought, and there is one of them per city.&lt;/p&gt;&lt;/div&gt;&lt;h2 style=&quot;margin:26px 0 4px;&quot;&gt;First — which one are you?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Four groups, four different jobs. Find your row.&lt;/p&gt;&lt;table style=&quot;width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.6;margin:14px 0 0;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;The Company&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;Cast, crew and investors. &lt;strong&gt;You are not competing.&lt;/strong&gt; Your names go on the pre-show slate, on a real cinema screen, in front of a paying audience.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Filmmakers&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;You came in from One Grand Film. You are here for the &lt;strong&gt;model&lt;/strong&gt; - whether an audience can open a screen without a studio. Your rewards are the filmmaker track below.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#EFC417;&quot;&gt;Captains&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;You run a city. &lt;strong&gt;This is the competition&lt;/strong&gt;, and the scoreboard is already running.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Supporters&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;You signed up. One thing is asked of you and it takes twenty seconds - it is at the bottom of this block.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2 style=&quot;margin:30px 0 4px;&quot;&gt;The ladder&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Same rungs for everyone. At each one you pick your side: &lt;strong&gt;🎬 the filmmaker track&lt;/strong&gt; if you are building something of your own, &lt;strong&gt;🎟️ the fan track&lt;/strong&gt; if you are not. Nobody has to want a film career to win the best prize on this board.&lt;/p&gt;&lt;table style=&quot;width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.6;margin:14px 0 0;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Claim a kit&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;🎬 One Grand Film community access &amp;nbsp;·&amp;nbsp; 🎟️ Your own tracked link and a place on the leaderboard&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;10 people&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;🎬 Festival Guide + Outreach Templates &amp;nbsp;·&amp;nbsp; 🎟️ &lt;strong&gt;Your name on the thank-you reel&lt;/strong&gt; that plays before the film&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;30 — your city opens&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;🎬 Lead Domino Film Academy (~$500) &amp;nbsp;·&amp;nbsp; 🎟️ &lt;strong&gt;A ticket to the screening you unlocked&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#EFC417;&quot;&gt;Top captain in a city that opens&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;🎬 &lt;strong&gt;Private Q&amp;amp;A with the cast of both films&lt;/strong&gt; &amp;nbsp;·&amp;nbsp; 🎟️ &lt;strong&gt;You introduce the film from the stage that night&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Top 50 campaign-wide&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;🎬 The same cast Q&amp;amp;A &amp;nbsp;·&amp;nbsp; 🎟️ &lt;strong&gt;Signed poster and a custom plaque&lt;/strong&gt;, signed by the cast and crew&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p class=&quot;sub&quot; style=&quot;margin:16px 0 0;color:#8B8B8B;font-size:13.5px;&quot;&gt;The currency is people who sign up through &lt;em&gt;your&lt;/em&gt; link and then actually send the email to their theater. Signups are the score; sent emails are what a programmer counts. Both are on the leaderboard, and it goes out twice a week.&lt;/p&gt;&lt;h2 style=&quot;margin:30px 0 4px;&quot;&gt;What to do next — one thing, whoever you are&lt;/h2&gt;&lt;table style=&quot;width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.6;margin:14px 0 0;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Company&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;Send your link to five people who would genuinely turn up. Your networks outperform everyone else&amp;rsquo;s here and it is not close.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Filmmakers&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;Post the mechanism, not the films - your people care that this might be their route too. The captions below are already written that way.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#EFC417;&quot;&gt;Captains&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;Pick one image, copy one caption, post it with your link today. Then send five personal messages. That is the entire job.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;padding:11px 14px 11px 0;vertical-align:top;white-space:nowrap;&quot;&gt;&lt;strong style=&quot;color:#F1F0EC;&quot;&gt;Supporters&lt;/strong&gt;&lt;/td&gt;&lt;td style=&quot;padding:11px 0;vertical-align:top;color:#c9c8c3;&quot;&gt;&lt;strong&gt;Send the demand email to your theater.&lt;/strong&gt; Twenty seconds. If you signed up and never sent it, that is the single most useful thing you can do right now.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/section&gt;
+
 &lt;section id=&quot;s1&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;
   &lt;div class=&quot;step-no&quot;&gt;STEP 1&lt;/div&gt;
   &lt;h2&gt;Pick the lane you&#x27;re comfortable in&lt;/h2&gt;
