@@ -193,7 +193,7 @@ update dts_ambassadors a
 -- ============================================================
 -- 4 · THE SHARED IMAGE BIN
 -- ============================================================
--- Read off the 43 images actually published at
+-- Read off the 53 images actually published at
 --   https://aaronjayrome.github.io/dts-creative-kit/images/
 -- so a row cannot point at a URL that does not exist. Fills EVERY ACTIVE SET by
 -- cross join rather than a list of slugs somebody has to remember to extend.
@@ -215,6 +215,16 @@ insert into _kit_bin (sort, name, note, url, width, height) values
   (116, 'Still · Hadria Deep Focus 001', '1080 x 451', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-deep-focus-001.jpg', 1080, 451),
   (118, 'Still · Javier Trappers 001', '1080 x 454', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-javier-trappers-001.jpg', 1080, 454),
   (120, 'Still · Mike Lake 001', '1080 x 450', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-mike-lake-001.jpg', 1080, 450),
+  (122, 'Still · Ab Kamble Holcombe 001', '1080 x 453', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-ab-kamble-holcombe-001.jpg', 1080, 453),
+  (124, 'Still · Anna Beth Javier Wade 001', '1080 x 456', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-anna-beth-javier-wade-001.jpg', 1080, 456),
+  (126, 'Still · Anna Cabin 001', '1080 x 455', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-anna-cabin-001.jpg', 1080, 455),
+  (128, 'Still · Dawn Anna Beth Trappers 002', '1080 x 454', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-dawn-anna-beth-trappers-002.jpg', 1080, 454),
+  (130, 'Still · Dawn Cu Living Room 001', '1080 x 455', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-dawn-cu-living-room-001.jpg', 1080, 455),
+  (132, 'Still · Hadria Mike 001', '1080 x 444', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-hadria-mike-001.jpg', 1080, 444),
+  (134, 'Still · Kamble Holcombe Ab Kitchen 001', '1080 x 453', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-kamble-holcombe-ab-kitchen-001.jpg', 1080, 453),
+  (136, 'Still · Mike Cabin 002', '1080 x 452', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-mike-cabin-002.jpg', 1080, 452),
+  (138, 'Still · Mike Sage Smoke 001', '1080 x 451', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-mike-sage-smoke-001.jpg', 1080, 451),
+  (140, 'Still · Scott Sacred Lands 001', '1080 x 452', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-scott-sacred-lands-001.jpg', 1080, 452),
   (202, 'Post · 01 Hook', '1080 x 1350', 'https://aaronjayrome.github.io/dts-creative-kit/images/films-01-hook.jpg', 1080, 1350),
   (204, 'Post · 02 Dead Dawn Poster', '1080 x 1350', 'https://aaronjayrome.github.io/dts-creative-kit/images/films-02-dead-dawn-poster.jpg', 1080, 1350),
   (206, 'Post · 03 Dead Dawn Still', '1080 x 1350', 'https://aaronjayrome.github.io/dts-creative-kit/images/films-03-dead-dawn-still.jpg', 1080, 1350),
@@ -264,7 +274,7 @@ commit;
 -- ============================================================
 -- 5 · VERIFY
 -- ============================================================
--- every active set should report 43 assets and 4 captions
+-- every active set should report 53 assets and 4 captions
 select s.slug,
        (select count(*) from dts_kit_assets   k where k.set_slug = s.slug) as assets,
        (select count(*) from dts_kit_captions c where c.set_slug = s.slug) as captions

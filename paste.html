@@ -36,8 +36,9 @@ code{color:var(--gold);font-family:"IBM Plex Mono",ui-monospace,monospace;font-s
 <h1>Paste board</h1>
 <p class="sub">Everything paste-ready, always current. Pick one, hit Copy. Bookmark this page &mdash;
 no file hunting.</p>
-<nav><button class="nav on" data-go="sql-kit-assets">1. SQL — every kit, every audience (RUN THIS FIRST)</button>
-<button class="nav" data-go="bundle-2616">2. Bundle 26.16 — captains stop getting filmmaker copy</button>
+<nav><button class="nav on" data-go="email-reactivate">Email — the 186 who never sent (SEND TODAY)</button>
+<button class="nav" data-go="sql-kit-assets">SQL — every kit, every audience (re-run: week 2 is out, 53 assets)</button>
+<button class="nav" data-go="bundle-2616">Bundle 26.16 — LIVE since 2026-09-04, kept for rollback</button>
 <button class="nav" data-go="model">The audience model — read this one</button>
 <button class="nav" data-go="cap-tue">3. Captain update — TUESDAY (the drop)</button>
 <button class="nav" data-go="cap-fri">4. Captain update — FRIDAY (the board)</button>
@@ -53,15 +54,81 @@ no file hunting.</p>
 <button class="nav" data-go="email-ogf">OGF follow-up — Day 8 of 90</button>
 <button class="nav" data-go="email-captain">Captain code recovery email</button></nav>
 
-<section class="item" id="sql-kit-assets">
-  <h2>1. SQL — every kit, every audience (RUN THIS FIRST)</h2>
+<section class="item" id="email-reactivate">
+  <h2>Email — the 186 who never sent (SEND TODAY)</h2>
+  <p class="where">GHL campaign, DTS location, audience = sent_at IS NULL. One ask, no kit, no news.</p>
+  <div class="bar">
+    <button class="copy" data-for="email-reactivate">Copy all</button>
+    <button class="ghost sel" data-for="email-reactivate">Select all</button>
+    <button class="ghost tog" data-for="email-reactivate">View rendered</button>
+    <span class="msg"></span>
+    <span class="size">4.5 KB</span>
+  </div>
+  <textarea readonly spellcheck="false" data-code="email-reactivate">&lt;!-- EMAIL-REACTIVATE-NONSENDERS  -  2026-09-10  (day 16 of 90)
+
+     THE 186. Read live 2026-09-10: 298 signups, 112 demand emails sent. So 62%
+     signed up, got matched to a real theater, and never sent the one-click
+     email. Nobody has ever asked them a second time.
+
+     WHY THIS EMAIL IS SO SHORT. They are not cold and they are not confused -
+     they are people who meant to and didn&#x27;t. That needs a reminder, not a
+     pitch. Anything else in here (the kit, the leaderboard, the films, the
+     mission, the 90 days) gives them a second thing to decide about, and a
+     second decision is how you lose the first one.
+
+     ONE ASK. ONE BUTTON. NO KIT LINK ON PURPOSE - the kit is for people who
+     post, and this audience has not done the easier thing yet.
+
+     AUDIENCE: DTS location, everyone with sent_at IS NULL. Exclude the 81
+     code-holders only if they are also non-senders - actually no, INCLUDE
+     them; a captain who never sent is exactly who this is for.
+
+     Merge tags: {{contact.first_name}}, {{contact.theater_market}}
+     Pure ASCII, entities only - pbcopy on this machine mangles real UTF-8. --&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;margin:0;padding:0;&quot;&gt;
+&lt;tr&gt;&lt;td align=&quot;center&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;padding:32px 16px;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,Roboto,Helvetica,Arial,sans-serif;&quot;&gt;
+&lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:560px;margin:0 auto;background:#0f0f0f;&quot;&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;
+&lt;div style=&quot;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8b8b8b;font-weight:900;&quot;&gt;DEMAND &lt;span style=&quot;color:#efc417;&quot;&gt;THE SCREEN&lt;/span&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 8px;&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:30px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;font-weight:900;color:#ffffff;&quot;&gt;You never sent it.&lt;/h1&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#efc417;&quot;&gt;That&amp;rsquo;s completely fair &amp;mdash; but it&amp;rsquo;s the whole thing, and it takes twenty seconds.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;{{contact.first_name}} &amp;mdash; you signed up, we matched you to {{contact.theater_market}}, and then the email never went. No judgement: it is one more tab on a day that already had enough of them.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;Here is why I am asking again rather than letting it go. &lt;strong style=&quot;color:#ffffff;&quot;&gt;A signup is a number. An email from your own inbox is a person a programmer can count.&lt;/strong&gt; Only the second one moves anything, and yours is already written &amp;mdash; addressed, signed, ready. You read it and press send.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 12px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/send-demand&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:17px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;Send it now&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 26px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:14px;line-height:1.6;color:#8b8b8b;text-align:center;&quot;&gt;Twenty seconds. No money, no account, nothing to install.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;We are &lt;strong style=&quot;color:#ffffff;&quot;&gt;fifteen days&lt;/strong&gt; from the first screenings, and this is the part I cannot do for you. I can make the films, build the list and make the call. I cannot be a person in your city writing to your cinema.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 28px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.6;color:#d6d6d6;&quot;&gt;&amp;mdash; AJ Rome&lt;br&gt;&lt;span style=&quot;color:#8b8b8b;font-size:14px;&quot;&gt;Director, &lt;em&gt;Dead Dawn&lt;/em&gt; &amp;amp; &lt;em&gt;Silt&lt;/em&gt; &amp;middot; Roaming Lens Films&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td style=&quot;padding:12px 24px 0;border-top:1px solid #2a2a2a;&quot;&gt;
+&lt;p style=&quot;margin:0;font-size:12px;line-height:1.6;color:#6f6f6f;&quot;&gt;Demand The Screen &amp;middot; Roaming Lens Films&lt;br&gt;You are getting this because you signed up and the demand email never went out.&lt;br&gt;Already sent it? Then ignore me entirely, and thank you.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</textarea>
+  <iframe class="prev hide" data-prev="email-reactivate" sandbox="allow-same-origin"></iframe>
+</section>
+
+<section class="item hide" id="sql-kit-assets">
+  <h2>SQL — every kit, every audience (re-run: week 2 is out, 53 assets)</h2>
   <p class="where">Supabase SQL editor, dts-prod. Creates the three voices, fixes the bucket routing, re-stamps people on the wrong one, and fills 43 assets into every active set. MUST run before bundle 26.16. Generated by _source/build_kit_sql.py + kit_captions.py.</p>
   <div class="bar">
     <button class="copy" data-for="sql-kit-assets">Copy all</button>
     <button class="ghost sel" data-for="sql-kit-assets">Select all</button>
     
     <span class="msg"></span>
-    <span class="size">19.3 KB</span>
+    <span class="size">20.8 KB</span>
   </div>
   <textarea readonly spellcheck="false" data-code="sql-kit-assets">-- ============================================================
 -- THE WHOLE KIT, FOR EVERY AUDIENCE  ·  generated, do not hand-edit
@@ -258,7 +325,7 @@ update dts_ambassadors a
 -- ============================================================
 -- 4 · THE SHARED IMAGE BIN
 -- ============================================================
--- Read off the 43 images actually published at
+-- Read off the 53 images actually published at
 --   https://aaronjayrome.github.io/dts-creative-kit/images/
 -- so a row cannot point at a URL that does not exist. Fills EVERY ACTIVE SET by
 -- cross join rather than a list of slugs somebody has to remember to extend.
@@ -280,6 +347,16 @@ insert into _kit_bin (sort, name, note, url, width, height) values
   (116, &#x27;Still · Hadria Deep Focus 001&#x27;, &#x27;1080 x 451&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-hadria-deep-focus-001.jpg&#x27;, 1080, 451),
   (118, &#x27;Still · Javier Trappers 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-javier-trappers-001.jpg&#x27;, 1080, 454),
   (120, &#x27;Still · Mike Lake 001&#x27;, &#x27;1080 x 450&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-mike-lake-001.jpg&#x27;, 1080, 450),
+  (122, &#x27;Still · Ab Kamble Holcombe 001&#x27;, &#x27;1080 x 453&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-ab-kamble-holcombe-001.jpg&#x27;, 1080, 453),
+  (124, &#x27;Still · Anna Beth Javier Wade 001&#x27;, &#x27;1080 x 456&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-anna-beth-javier-wade-001.jpg&#x27;, 1080, 456),
+  (126, &#x27;Still · Anna Cabin 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-anna-cabin-001.jpg&#x27;, 1080, 455),
+  (128, &#x27;Still · Dawn Anna Beth Trappers 002&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-dawn-anna-beth-trappers-002.jpg&#x27;, 1080, 454),
+  (130, &#x27;Still · Dawn Cu Living Room 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-dawn-cu-living-room-001.jpg&#x27;, 1080, 455),
+  (132, &#x27;Still · Hadria Mike 001&#x27;, &#x27;1080 x 444&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-hadria-mike-001.jpg&#x27;, 1080, 444),
+  (134, &#x27;Still · Kamble Holcombe Ab Kitchen 001&#x27;, &#x27;1080 x 453&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-kamble-holcombe-ab-kitchen-001.jpg&#x27;, 1080, 453),
+  (136, &#x27;Still · Mike Cabin 002&#x27;, &#x27;1080 x 452&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-mike-cabin-002.jpg&#x27;, 1080, 452),
+  (138, &#x27;Still · Mike Sage Smoke 001&#x27;, &#x27;1080 x 451&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-mike-sage-smoke-001.jpg&#x27;, 1080, 451),
+  (140, &#x27;Still · Scott Sacred Lands 001&#x27;, &#x27;1080 x 452&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w02-scott-sacred-lands-001.jpg&#x27;, 1080, 452),
   (202, &#x27;Post · 01 Hook&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-01-hook.jpg&#x27;, 1080, 1350),
   (204, &#x27;Post · 02 Dead Dawn Poster&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-02-dead-dawn-poster.jpg&#x27;, 1080, 1350),
   (206, &#x27;Post · 03 Dead Dawn Still&#x27;, &#x27;1080 x 1350&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/films-03-dead-dawn-still.jpg&#x27;, 1080, 1350),
@@ -329,7 +406,7 @@ commit;
 -- ============================================================
 -- 5 · VERIFY
 -- ============================================================
--- every active set should report 43 assets and 4 captions
+-- every active set should report 53 assets and 4 captions
 select s.slug,
        (select count(*) from dts_kit_assets   k where k.set_slug = s.slug) as assets,
        (select count(*) from dts_kit_captions c where c.set_slug = s.slug) as captions
@@ -357,7 +434,7 @@ union all select &#x27;Jack&#x27;, json_array_length(dts_kit(&#x27;21E848&#x27;)
 </section>
 
 <section class="item hide" id="bundle-2616">
-  <h2>2. Bundle 26.16 — captains stop getting filmmaker copy</h2>
+  <h2>Bundle 26.16 — LIVE since 2026-09-04, kept for rollback</h2>
   <p class="where">GHL → Settings → Tracking Code (the funnel header). Replace the whole previous block. ONLY after the SQL above: it mints captains into a &#x27;captain&#x27; bucket that the SQL creates.</p>
   <div class="bar">
     <button class="copy" data-for="bundle-2616">Copy all</button>
@@ -2559,11 +2636,11 @@ Concretely, from here:
     <span class="msg"></span>
     <span class="size">11.2 KB</span>
   </div>
-  <textarea readonly spellcheck="false" data-code="cap-tue">&lt;!-- CAPTAIN UPDATE (tue) - generated 2026-09-04 by _source/build_captain_update.py
+  <textarea readonly spellcheck="false" data-code="cap-tue">&lt;!-- CAPTAIN UPDATE (tue) - generated 2026-09-10 by _source/build_captain_update.py
      DO NOT HAND-EDIT. Every number here was read live at build time:
-       cities  rpc/dts_map        25 active, 4 past threshold, 109 sends
+       cities  rpc/dts_map        25 active, 4 past threshold, 112 sends
        board   dts_referrals      top 10, UTM codes filtered out
-       stills  RELEASED_THROUGH_WEEK = 1
+       stills  RELEASED_THROUGH_WEEK = 2
      Rebuild before every send - a stale board is worse than no board.
      Merge tags: {{contact.first_name}} --&gt;
 &lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; bgcolor=&quot;#0f0f0f&quot; style=&quot;background:#0f0f0f;margin:0;padding:0;&quot;&gt;
@@ -2571,17 +2648,17 @@ Concretely, from here:
 &lt;table role=&quot;presentation&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; width=&quot;100%&quot; style=&quot;max-width:560px;margin:0 auto;background:#0f0f0f;&quot;&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8b8b8b;font-weight:900;&quot;&gt;DEMAND &lt;span style=&quot;color:#efc417;&quot;&gt;THE SCREEN&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 8px;&quot;&gt;&lt;h1 style=&quot;margin:0;font-size:30px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;font-weight:900;color:#ffffff;&quot;&gt;New frames are up.&lt;/h1&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#efc417;&quot;&gt;Week 1 of the drip just went live in the kit.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 20px;&quot;&gt;&lt;h2 style=&quot;margin:0;font-size:19px;line-height:1.3;font-weight:800;color:#efc417;&quot;&gt;Week 2 of the drip just went live in the kit.&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 22px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;{{contact.first_name}} &amp;mdash; ten frames, five from each film, plus the two ready-made three-frame posts. They went up yesterday and they are yours to post from your own account today. Nobody outside this list has seen them, which is the whole reason they work.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;a href=&quot;https://demandthescreen.com/creative-kit&quot; style=&quot;display:block;background:#efc417;color:#000000;text-decoration:none;text-align:center;padding:16px 20px;border-radius:6px;font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;&quot;&gt;Open the kit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;What went up&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;&lt;p style=&quot;margin:0 0 6px;font-size:14px;line-height:1.7;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Dead Dawn&lt;/strong&gt; &amp;mdash; 5 frames&lt;/p&gt;&lt;p style=&quot;margin:0;font-size:14px;line-height:1.7;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;Silt&lt;/strong&gt; &amp;mdash; 5 frames&lt;/p&gt;&lt;p style=&quot;margin:10px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;Both three-frame posts are pre-built. Captions are written. Swap in your own link and you are done.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;The board&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:14.5px;line-height:1.85;color:#d6d6d6;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;New Orleans&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;81 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Los Angeles&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;45 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Dallas&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;42 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Austin&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;33 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Atlanta&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;13 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Columbus&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;9 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;New York&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;7 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;San Francisco&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;5 / 30&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;margin:14px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;109 demand emails sent from people&amp;rsquo;s own inboxes &amp;middot; 25 cities in play &amp;middot; 30 is the line where a programmer has a reason to look.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;The one to push: Atlanta.&lt;/strong&gt; 13 of 30. It is the closest city still under the line, which makes it the cheapest win on the board this week.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:14.5px;line-height:1.85;color:#d6d6d6;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;New Orleans&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;81 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Los Angeles&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;45 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Dallas&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;43 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Austin&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;33 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Atlanta&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;14 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Columbus&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;9 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;New York&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;7 / 30&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Richmond&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#8b8b8b;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;6 / 30&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;margin:14px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;112 demand emails sent from people&amp;rsquo;s own inboxes &amp;middot; 25 cities in play &amp;middot; 30 is the line where a programmer has a reason to look.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;The one to push: Atlanta.&lt;/strong&gt; 14 of 30. It is the closest city still under the line, which makes it the cheapest win on the board this week.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;Who is actually moving it&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:14.5px;line-height:1.8;color:#d6d6d6;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;1&lt;/td&gt;&lt;td style=&quot;color:#efc417;padding:2px 0;&quot;&gt;Emily C.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;34&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;2&lt;/td&gt;&lt;td style=&quot;color:#efc417;padding:2px 0;&quot;&gt;Eric L.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;33&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;3&lt;/td&gt;&lt;td style=&quot;color:#efc417;padding:2px 0;&quot;&gt;Olivia A.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;29&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Wayne M.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;20&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;5&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Krishna S.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;6&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Ashley A.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;7&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Andrea S.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;8&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Eliot B.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;David A.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;10&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Malcolm G.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;margin:14px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;Signups credited to each person&amp;rsquo;s own link. The bottom of this board is a smaller number than most people assume.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;background:#161616;border:1px solid rgba(239,196,23,.28);border-radius:8px;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:18px 20px;&quot;&gt;&lt;table role=&quot;presentation&quot; width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot; style=&quot;font-size:14.5px;line-height:1.8;color:#d6d6d6;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;1&lt;/td&gt;&lt;td style=&quot;color:#efc417;padding:2px 0;&quot;&gt;Emily C.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;36&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;2&lt;/td&gt;&lt;td style=&quot;color:#efc417;padding:2px 0;&quot;&gt;Eric L.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;33&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;3&lt;/td&gt;&lt;td style=&quot;color:#efc417;padding:2px 0;&quot;&gt;Olivia A.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#efc417;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;29&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;4&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Wayne M.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;20&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;5&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Krishna S.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;6&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Ashley A.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;7&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Andrea S.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;15&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;8&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Eliot B.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;12&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;9&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;David A.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;color:#8b8b8b;padding:2px 8px 2px 0;width:22px;font-family:ui-monospace,Menlo,monospace;&quot;&gt;10&lt;/td&gt;&lt;td style=&quot;color:#ffffff;padding:2px 0;&quot;&gt;Malcolm G.&lt;/td&gt;&lt;td align=&quot;right&quot; style=&quot;color:#d6d6d6;font-weight:800;font-family:ui-monospace,Menlo,monospace;padding:2px 0;&quot;&gt;4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;margin:14px 0 0;font-size:13px;line-height:1.6;color:#8b8b8b;&quot;&gt;Signups credited to each person&amp;rsquo;s own link. The bottom of this board is a smaller number than most people assume.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 24px;&quot;&gt;&lt;p style=&quot;margin:0;font-size:16px;line-height:1.65;color:#d6d6d6;&quot;&gt;&lt;strong style=&quot;color:#ffffff;&quot;&gt;No link of your own yet?&lt;/strong&gt; That is the only thing standing between you and this board. It takes about thirty seconds and costs nothing: &lt;a href=&quot;https://demandthescreen.com/join?b=supporter-1b&quot; style=&quot;color:#efc417;font-weight:700;&quot;&gt;demandthescreen.com/join&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:8px 24px 24px;&quot;&gt;&lt;div style=&quot;height:1px;background:#2a2a2a;&quot;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style=&quot;padding:0 24px 10px;&quot;&gt;&lt;div style=&quot;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#efc417;font-weight:800;&quot;&gt;Everything to post with&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
