@@ -602,5 +602,62 @@ showLane("mission");
 showBin("stills");
 paint();
 markResolved();
+
+/* ---- role picker (2026-09-11) -------------------------------------------
+   AJ: reveal the correct steps based on what they click, "rather than
+   everything being available all at the same time."
+
+   Enhancement only. With no JS nothing is hidden and the page reads exactly
+   as it did before - which matters because GHL neuters inline scripts and
+   only the external kit.js runs. The body class is what does the hiding, so
+   if this code never executes, nothing disappears. */
+(function () {
+  var pick = document.querySelector('.rolepick');
+  if (!pick) return;
+  var btns  = [].slice.call(document.querySelectorAll('.rolebtn'));
+  var paths = [].slice.call(document.querySelectorAll('.rolepath'));
+  var secs  = [].slice.call(document.querySelectorAll('section[data-roles]'));
+  var all   = document.querySelector('.showall');
+
+  function apply(role, scroll) {
+    if (!role) return;
+    document.body.classList.add('has-role');
+    btns.forEach(function (b) { b.classList.toggle('on', b.dataset.role === role); });
+    paths.forEach(function (p) { p.classList.toggle('on', p.dataset.path === role); });
+    secs.forEach(function (s) {
+      s.classList.toggle('on', (' ' + s.getAttribute('data-roles') + ' ')
+                                 .indexOf(' ' + role + ' ') > -1);
+    });
+    try { localStorage.setItem('dts_role', role); } catch (e) {}
+    if (scroll) {
+      var p = document.querySelector('.rolepath.on');
+      if (p) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    window.DTS_ROLE = role;
+  }
+
+  function clear() {
+    document.body.classList.remove('has-role');
+    btns.forEach(function (b) { b.classList.remove('on'); });
+    paths.forEach(function (p) { p.classList.remove('on'); });
+    try { localStorage.removeItem('dts_role'); } catch (e) {}
+    window.DTS_ROLE = 'all';
+  }
+
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.role, true); });
+  });
+  if (all) all.addEventListener('click', clear);
+
+  /* ?role=captain wins, so an email can drop someone straight into their path */
+  var q = null;
+  try { q = new URLSearchParams(location.search).get('role'); } catch (e) {}
+  var saved = null;
+  try { saved = localStorage.getItem('dts_role'); } catch (e) {}
+  if (q && document.querySelector('.rolepath[data-path="' + q + '"]')) apply(q, false);
+  else if (saved) apply(saved, false);
+
+  window.DTS_ROLEPICK = 'ready';
+})();
 </script>
 
