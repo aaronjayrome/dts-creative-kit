@@ -154,10 +154,15 @@ markResolved();
                                  .indexOf(' ' + role + ' ') > -1);
     });
     try { localStorage.setItem('dts_role', role); } catch (e) {}
-    if (scroll) {
-      var p = document.querySelector('.rolepath.on');
-      if (p) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    /* Scroll to the PICKER, not to the path panel.
+       AJ, 2026-09-11: "the anchor goes to the wrong place. They all go to the
+       same section." Scrolling to the path put every role at the same spot on
+       screen with the picker pushed off the top, so the highlighted button was
+       invisible and the whole thing read as "nothing happened". Landing on the
+       picker shows all three things that changed at once: which button is now
+       lit, your three steps under it, and the first section of your version of
+       the page below that. */
+    if (scroll && pick) pick.scrollIntoView({ behavior: 'smooth', block: 'start' });
     window.DTS_ROLE = role;
   }
 
