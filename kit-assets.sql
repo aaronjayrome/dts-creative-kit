@@ -193,7 +193,7 @@ update dts_ambassadors a
 -- ============================================================
 -- 4 · THE SHARED IMAGE BIN
 -- ============================================================
--- Read off the 53 images actually published at
+-- Read off the 54 images actually published at
 --   https://aaronjayrome.github.io/dts-creative-kit/images/
 -- so a row cannot point at a URL that does not exist. Fills EVERY ACTIVE SET by
 -- cross join rather than a list of slugs somebody has to remember to extend.
@@ -205,6 +205,7 @@ create temporary table _kit_bin (
 ) on commit drop;
 
 insert into _kit_bin (sort, name, note, url, width, height) values
+  (52, 'Trailer · Silt Official Trailer Thumb', '1280 x 720', 'https://aaronjayrome.github.io/dts-creative-kit/images/trailer-silt-official-trailer-thumb.jpg', 1280, 720),
   (102, 'Still · Anna Beth Post Office Antlers 001', '1080 x 454', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-post-office-antlers-001.jpg', 1080, 454),
   (104, 'Still · Anna Beth Red Cu', '1080 x 455', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-red-cu.jpg', 1080, 455),
   (106, 'Still · Anna Beth Trappers 001', '1080 x 455', 'https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-trappers-001.jpg', 1080, 455),
@@ -274,7 +275,7 @@ commit;
 -- ============================================================
 -- 5 · VERIFY
 -- ============================================================
--- every active set should report 53 assets and 4 captions
+-- every active set should report 54 assets and 4 captions
 select s.slug,
        (select count(*) from dts_kit_assets   k where k.set_slug = s.slug) as assets,
        (select count(*) from dts_kit_captions c where c.set_slug = s.slug) as captions
