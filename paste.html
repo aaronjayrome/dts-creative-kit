@@ -63,7 +63,7 @@ no file hunting.</p>
     <button class="ghost sel" data-for="ghl-page">Select all</button>
     <button class="ghost tog" data-for="ghl-page">View rendered</button>
     <span class="msg"></span>
-    <span class="size">54.6 KB</span>
+    <span class="size">59.9 KB</span>
   </div>
   <textarea readonly spellcheck="false" data-code="ghl-page">&lt;title&gt;The Captain&#x27;s Kit&lt;/title&gt;
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
@@ -190,6 +190,26 @@ h2{font-size:clamp(25px,5.6vw,36px); line-height:1.02; margin:9px 0 0}
 .copy:hover{border-color:var(--gold); color:var(--gold)}
 .copy.done{background:var(--ok); border-color:var(--ok); color:#0B2216}
 mark{background:rgba(239,196,23,.17); color:var(--gold); border-radius:3px; padding:0 2px}
+
+/* --------------------------------------------------------------- trailer */
+.tr-play{display:block; position:relative; margin-top:22px; border-radius:var(--r); overflow:hidden;
+  border:1px solid var(--line); background:#000}
+.tr-play img{display:block; width:100%; height:auto}
+.tr-play .tr-btn{position:absolute; left:50%; top:50%; width:74px; height:52px; margin:-26px 0 0 -37px;
+  background:rgba(0,0,0,.72); border:2px solid var(--gold); border-radius:12px}
+.tr-play .tr-btn:after{content:&quot;&quot;; position:absolute; left:29px; top:14px; border-style:solid;
+  border-width:11px 0 11px 19px; border-color:transparent transparent transparent var(--gold)}
+.tr-play:hover .tr-btn{background:var(--gold)}
+.tr-play:hover .tr-btn:after{border-left-color:#0F0F0F}
+.tr-dl{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+.tr-dl a{flex:1 1 200px; display:block; text-align:center; text-decoration:none; padding:13px 14px;
+  border-radius:8px; font:600 12px/1.3 &quot;IBM Plex Sans&quot;; letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--line); background:var(--panel-2); color:var(--text)}
+.tr-dl a.pri{background:var(--gold); border-color:var(--gold); color:#0F0F0F}
+.tr-dl a small{display:block; margin-top:4px; font-weight:500; letter-spacing:.04em;
+  text-transform:none; opacity:.75}
+.tr-press{margin-top:14px; font-size:13px; color:var(--muted-2)}
+.tr-press a{color:var(--gold)}
 
 /* ------------------------------------------------------------------ misc */
 .two{display:grid; gap:12px; margin-top:22px}
@@ -334,6 +354,23 @@ body.has-role section[data-roles].on{display:block}
 &lt;/div&gt;
 
 &lt;main&gt;
+&lt;section id=&quot;sTrailer&quot; data-roles=&quot;captain filmmaker supporter team&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;step-no&quot;&gt;NEW · SILT&lt;/div&gt;&lt;h2&gt;The official trailer is out&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Two ways to post it. &lt;b&gt;Share the YouTube link&lt;/b&gt; wherever links work: every view there counts for the film. &lt;b&gt;Upload the file itself&lt;/b&gt; to Instagram, TikTok and Reels, where a link gets buried. Please post it whole and don&#x27;t re-cut it.&lt;/p&gt;&lt;a class=&quot;tr-play&quot; href=&quot;https://youtu.be/qDUQ15-nxTM&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; aria-label=&quot;Watch the Silt trailer on YouTube&quot;&gt;&lt;img src=&quot;https://aaronjayrome.github.io/dts-creative-kit/images/trailer-silt-official-trailer-thumb.jpg&quot; alt=&quot;Silt, official trailer&quot; loading=&quot;lazy&quot; width=&quot;1280&quot; height=&quot;720&quot;&gt;&lt;span class=&quot;tr-btn&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;div class=&quot;tr-dl&quot;&gt;&lt;a href=&quot;https://youtu.be/qDUQ15-nxTM&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open on YouTube&lt;small&gt;youtu.be/qDUQ15-nxTM&lt;/small&gt;&lt;/a&gt;&lt;a class=&quot;pri&quot; href=&quot;https://hpwihogzttscakcycmio.supabase.co/storage/v1/object/public/dts/trailer/SILT-Official-Trailer-1080p.mp4?download=SILT-Official-Trailer-1080p.mp4&quot; download=&quot;SILT-Official-Trailer-1080p.mp4&quot;&gt;Download 1080p&lt;small&gt;49 MB · for posting&lt;/small&gt;&lt;/a&gt;&lt;a class=&quot;&quot; href=&quot;https://hpwihogzttscakcycmio.supabase.co/storage/v1/object/public/dts/trailer/SILT-Official-Trailer-720p.mp4?download=SILT-Official-Trailer-720p.mp4&quot; download=&quot;SILT-Official-Trailer-720p.mp4&quot;&gt;Download 720p&lt;small&gt;24 MB · quicker on a phone&lt;/small&gt;&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;tr-press&quot;&gt;Already covered by &lt;a href=&quot;https://bloody-disgusting.com/movie/3969667/tommy-wiseau-disturbs-in-lakeside-cosmic-horror-movie-silt-trailer/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Bloody Disgusting&lt;/a&gt; · &lt;a href=&quot;https://www.horrorsociety.com/2026/09/29/tommy-wiseau-stars-in-new-psychological-horror-thriller-first-look-images-and-trailer/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Horror Society&lt;/a&gt; · &lt;a href=&quot;https://ihorror.com/silt-trailer-tommy-wiseau-aaron-jay-rome-cosmic-horror/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;iHorror&lt;/a&gt;. Those links are worth sharing too.&lt;/p&gt;&lt;div class=&quot;cards&quot;&gt;&lt;article class=&quot;card&quot;&gt;&lt;div class=&quot;card-h&quot;&gt;&lt;h3&gt;With the trailer&lt;/h3&gt;&lt;button class=&quot;copy&quot; data-k=&quot;cap-trailer-0&quot;&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;card-b&quot; data-body=&quot;cap-trailer-0&quot;&gt;The SILT trailer is out.
+
+A lakeside retreat, a fractured group of friends, and whatever is living under the water. Tommy Wiseau, Vernon Davis, Andrea Sixtos, Olivia Grace Applegate, Malcolm Goodwin, David Anders.
+
+It&#x27;s not going to theaters through a studio. It&#x27;s being booked by audience request, one city at a time. Put in your ZIP and it writes the request for you → &lt;mark&gt;{your link}&lt;/mark&gt;
+
+Trailer: https://youtu.be/qDUQ15-nxTM&lt;/div&gt;&lt;/article&gt;
+&lt;article class=&quot;card&quot;&gt;&lt;div class=&quot;card-h&quot;&gt;&lt;h3&gt;The press one&lt;/h3&gt;&lt;button class=&quot;copy&quot; data-k=&quot;cap-trailer-1&quot;&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;card-b&quot; data-body=&quot;cap-trailer-1&quot;&gt;Bloody Disgusting, Horror Society and iHorror have all run the trailer for SILT, with Tommy Wiseau as the man who owns the lake.
+
+No distributor. It&#x27;s going to theaters because people ask for it. The first stop is the Lyric in Fort Collins on Saturday, October 10, as a double feature with DEAD DAWN.
+
+Watch: https://youtu.be/qDUQ15-nxTM
+Ask for your city → &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;article class=&quot;card&quot;&gt;&lt;div class=&quot;card-h&quot;&gt;&lt;h3&gt;One line, for a story or a reply&lt;/h3&gt;&lt;button class=&quot;copy&quot; data-k=&quot;cap-trailer-2&quot;&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;card-b&quot; data-body=&quot;cap-trailer-2&quot;&gt;SILT, official trailer → https://youtu.be/qDUQ15-nxTM · want it in &lt;mark&gt;{your city}&lt;/mark&gt;? → &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/section&gt;
+
 &lt;section id=&quot;s0&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;div class=&quot;rolepick&quot;&gt;&lt;div class=&quot;rp-eyebrow&quot;&gt;Start here&lt;/div&gt;&lt;h2 class=&quot;rp-q&quot;&gt;Which one are you?&lt;/h2&gt;&lt;p class=&quot;rp-sub&quot;&gt;Pick one and this page will show you only your part. You can change it any time.&lt;/p&gt;&lt;div class=&quot;rp-btns&quot;&gt;&lt;button class=&quot;rolebtn&quot; data-role=&quot;supporter&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;rb-t&quot;&gt;I signed up&lt;/span&gt;&lt;span class=&quot;rb-s&quot;&gt;and that is about it so far&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;rolebtn&quot; data-role=&quot;captain&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;rb-t&quot;&gt;I&#x27;m helping run a city&lt;/span&gt;&lt;span class=&quot;rb-s&quot;&gt;one of several, and that is the point&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;rolebtn&quot; data-role=&quot;filmmaker&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;rb-t&quot;&gt;I&#x27;m a filmmaker&lt;/span&gt;&lt;span class=&quot;rb-s&quot;&gt;here for the model&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;rolebtn&quot; data-role=&quot;team&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;rb-t&quot;&gt;I made one of them&lt;/span&gt;&lt;span class=&quot;rb-s&quot;&gt;cast, crew or investor&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;rolepaths&quot;&gt;&lt;div class=&quot;rolepath&quot; data-path=&quot;supporter&quot;&gt;&lt;h2&gt;One thing first. It takes twenty seconds.&lt;/h2&gt;&lt;ol class=&quot;steps&quot;&gt;&lt;li&gt;&lt;strong&gt;Send the demand email to your theater.&lt;/strong&gt;&lt;span&gt;Already written, already addressed. You read it and press send. A signup is a number; an email from your own inbox is a person a programmer can count. &lt;a href=&quot;https://demandthescreen.com/send-demand&quot;&gt;Send it now &amp;rarr;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Then tell people, and keep telling them.&lt;/strong&gt;&lt;span&gt;Your family chat. The group you are already in. One friend who would genuinely come. Not a campaign - just mentioning it when it fits.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Want to do more than that?&lt;/strong&gt;&lt;span&gt;Pick &lt;strong&gt;I&#x27;m helping run a city&lt;/strong&gt; above and the page will show you the images and the words, all of it already made.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p class=&quot;closer&quot;&gt;That is the whole ask. Everything else on this page is optional.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;rolepath&quot; data-path=&quot;captain&quot;&gt;&lt;h2&gt;Your city opens when people keep hearing about it.&lt;/h2&gt;&lt;ol class=&quot;steps&quot;&gt;&lt;li&gt;&lt;strong&gt;Put your link in your bio, today.&lt;/strong&gt;&lt;span&gt;Instagram and TikTok do not make a link in a caption clickable, so a link inside a post is dead text. Your bio link works on this post and every post you have ever made. Get yours at &lt;a href=&quot;https://demandthescreen.com/kit&quot;&gt;demandthescreen.com/kit&lt;/a&gt;, then write &amp;ldquo;link in bio&amp;rdquo; on the post.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Post something, then post again next week.&lt;/strong&gt;&lt;span&gt;Scroll down. Take any image, take any caption, mix them however you like. One post is a start, not a finish - the same city seeing it three times is what actually moves.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Put it where you already talk to people.&lt;/strong&gt;&lt;span&gt;Facebook groups. The family chat. Your neighbourhood thread. A group chat of six people who would come beats a post to six hundred who scroll past.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p class=&quot;closer&quot;&gt;There are usually several captains in a city and that is deliberate &amp;mdash; one person cannot reach a whole town. Find the others in your city in the community, split the ground, and tell each other what worked.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;rolepath&quot; data-path=&quot;filmmaker&quot;&gt;&lt;h2&gt;You are here for the model, not for my films.&lt;/h2&gt;&lt;ol class=&quot;steps&quot;&gt;&lt;li&gt;&lt;strong&gt;Watch the mechanism.&lt;/strong&gt;&lt;span&gt;Enough people in one city ask their local arthouse directly and a programmer looks. Not a festival, not a sales agent. Demonstrated demand, addressed to a named theater, sent by real people from their own email.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;If you post, post the model.&lt;/strong&gt;&lt;span&gt;Use the &lt;strong&gt;mission&lt;/strong&gt; images and captions below. They are about whether an audience can open a screen without a studio, which is the part your people care about. The film captions will not land with them.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Keep telling filmmakers who are stuck.&lt;/strong&gt;&lt;span&gt;Not once. Whenever it comes up - and with this crowd it comes up constantly. The person with a finished film and no route is who this is for.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p class=&quot;closer&quot;&gt;These two films are the crash-test dummy. If it holds, the version you point at your own film is the next thing built.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;rolepath&quot; data-path=&quot;team&quot;&gt;&lt;h2&gt;You made one of these. Nobody else can say that.&lt;/h2&gt;&lt;ol class=&quot;steps&quot;&gt;&lt;li&gt;&lt;strong&gt;Put your link in your bio.&lt;/strong&gt;&lt;span&gt;Get it at &lt;a href=&quot;https://demandthescreen.com/kit&quot;&gt;demandthescreen.com/kit&lt;/a&gt;. Everything you post should carry it, or none of it is credited to you.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Say &amp;ldquo;I worked on this&amp;rdquo; - and keep saying it.&lt;/strong&gt;&lt;span&gt;That sentence is the most valuable one available to this campaign and only about fifty people on earth can use it. Use the &lt;strong&gt;films&lt;/strong&gt; images below, not the mission ones.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Go where your people already are.&lt;/strong&gt;&lt;span&gt;Your group chats, your industry threads, the people who would turn up because it is you asking. Your networks outperform everyone else&#x27;s here and it is not close.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p class=&quot;closer&quot;&gt;Your names go on the pre-show slate, on a real screen, in front of a paying audience. And if a theater ever writes back to someone you sent this to, forward it to team@demandthescreen.com - replies land with them, not us.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;roleall&quot;&gt;&lt;button class=&quot;showall&quot; type=&quot;button&quot;&gt;Show me everything instead&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
 
 &lt;section id=&quot;sLadder&quot; data-roles=&quot;captain team&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;
@@ -445,7 +482,7 @@ I&#x27;d rather back something running the experiment in the open.
 
 DEAD DAWN — a post office clerk everyone overlooks, and the morning something dark descends. Dark comedy, small-town true crime, a cult anti-hero at the middle of it.
 
-SILT — a lake house, a fractured group of friends, and whatever is living under the water.
+SILT — a lakeside retreat, a fractured group of friends, and whatever is living under the water.
 
 Nobody greenlit them. They were made anyway, and now they&#x27;re being booked the same way — by asking. Put in your ZIP and it does the rest.
 
@@ -455,7 +492,7 @@ Nobody greenlit them. They were made anyway, and now they&#x27;re being booked t
 DEAD DAWN. Ashley Lenz, Olivia Grace Applegate, Malcolm Goodwin, David Anders, Krishna Smitha, Michael Papajohn, Isaiah LaBorde. Produced by Isaiah LaBorde. Written and directed by Aaron Jay Rome.
 
 It&#x27;s going to theaters without a studio. Your ZIP is the whole ask → &lt;mark&gt;{your link}&lt;/mark&gt;&lt;/div&gt;&lt;/article&gt;
-&lt;article class=&quot;card&quot;&gt;&lt;div class=&quot;card-h&quot;&gt;&lt;h3&gt;Silt&lt;/h3&gt;&lt;button class=&quot;copy&quot; data-k=&quot;cap-films-2&quot;&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;card-b&quot; data-body=&quot;cap-films-2&quot;&gt;A lake house. A fractured group of friends. A weekend that was supposed to fix everything. Old wounds have a way of surfacing — and whatever is living under that water knows exactly where to find them.
+&lt;article class=&quot;card&quot;&gt;&lt;div class=&quot;card-h&quot;&gt;&lt;h3&gt;Silt&lt;/h3&gt;&lt;button class=&quot;copy&quot; data-k=&quot;cap-films-2&quot;&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;card-b&quot; data-body=&quot;cap-films-2&quot;&gt;A lakeside retreat. A fractured group of friends. A weekend that was supposed to fix everything. Old wounds have a way of surfacing — and whatever is living under that water knows exactly where to find them.
 
 SILT. Andrea Sixtos, David Anders, Malcolm Goodwin, Tommy Wiseau, Olivia Grace Applegate, Michael Papajohn, Vernon Davis, Krishna Smitha, Isaiah LaBorde.
 
@@ -493,8 +530,8 @@ No studio, no distributor — they&#x27;re being booked by audience request, one
   &lt;div class=&quot;cards&quot; id=&quot;c-aj&quot; style=&quot;margin-top:14px&quot;&gt;&lt;article class=&quot;card&quot;&gt;&lt;div class=&quot;card-h&quot;&gt;&lt;h3&gt;The paragraph, if they want words&lt;/h3&gt;&lt;button class=&quot;copy&quot; data-k=&quot;aj-0&quot;&gt;Copy&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;card-b&quot; data-body=&quot;aj-0&quot;&gt;Aaron Jay Rome (AJ) — writer-director, Roaming Lens Films. Directing credits: Go Crazy Go Mad, End Trip, and the two features in this campaign, Dead Dawn and Silt. He also appears as an actor in Tom McCarthy&#x27;s A Statement.
 
 IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
-  &lt;div class=&quot;two&quot; id=&quot;films-two&quot;&gt;&lt;div class=&quot;film&quot;&gt;&lt;h3&gt;Dead Dawn&lt;/h3&gt;&lt;div class=&quot;genre&quot;&gt;Dark comedy · Small-town true crime · Cult anti-hero&lt;/div&gt;&lt;p&gt;Anna-Beth is the post office clerk everyone overlooks. She can&#x27;t say no to a bad customer, a worse boss, or the controlling ex who won&#x27;t let go — until something dark descends with the dawn and the woman nobody saw coming discovers exactly what she&#x27;s capable of.&lt;/p&gt;&lt;p class=&quot;cast&quot;&gt;Ashley Lenz · Olivia Grace Applegate · Malcolm Goodwin · David Anders · Krishna Smitha · Michael Papajohn · Isaiah LaBorde&lt;/p&gt;&lt;p class=&quot;cast&quot; style=&quot;margin-top:8px&quot;&gt;Produced by Isaiah LaBorde · Written and directed by Aaron Jay Rome&lt;/p&gt;&lt;p style=&quot;margin:12px 0 0&quot;&gt;&lt;a href=&quot;https://www.imdb.com/title/tt35397180/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;★ View on IMDb&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;film&quot;&gt;&lt;h3&gt;Silt&lt;/h3&gt;&lt;div class=&quot;genre&quot;&gt;Cosmic thriller · Cabin-in-the-woods · Elevated horror&lt;/div&gt;&lt;p&gt;A lake house. A fractured group of friends. A weekend that was supposed to fix everything. Old wounds have a way of surfacing — and whatever is living under that water knows exactly where to find them.&lt;/p&gt;&lt;p class=&quot;cast&quot;&gt;Andrea Sixtos · David Anders · Malcolm Goodwin · Tommy Wiseau · Olivia Grace Applegate · Michael Papajohn · Vernon Davis · Krishna Smitha · Isaiah LaBorde&lt;/p&gt;&lt;p class=&quot;cast&quot; style=&quot;margin-top:8px&quot;&gt;Story by Vernon Davis &amp;amp; Tiffany Toney · Produced by Isaiah LaBorde · Executive producer Vernon Davis · Written and directed by Aaron Jay Rome&lt;/p&gt;&lt;p style=&quot;margin:12px 0 0&quot;&gt;&lt;a href=&quot;https://www.imdb.com/title/tt35855318/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;★ View on IMDb&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;two&quot; id=&quot;films-two&quot;&gt;&lt;div class=&quot;film&quot;&gt;&lt;h3&gt;&lt;img src=&quot;https://hpwihogzttscakcycmio.supabase.co/storage/v1/object/public/dts/brand/dead-dawn-logo-v1.png&quot; alt=&quot;Dead Dawn&quot; width=&quot;800&quot; height=&quot;621&quot; loading=&quot;lazy&quot; style=&quot;display:block;height:auto;max-width:100%;width:200px&quot;&gt;&lt;/h3&gt;&lt;div class=&quot;genre&quot;&gt;Dark comedy · Small-town true crime · Cult anti-hero&lt;/div&gt;&lt;p&gt;Anna-Beth is the post office clerk everyone overlooks. She can&#x27;t say no to a bad customer, a worse boss, or the controlling ex who won&#x27;t let go — until something dark descends with the dawn and the woman nobody saw coming discovers exactly what she&#x27;s capable of.&lt;/p&gt;&lt;p class=&quot;cast&quot;&gt;Ashley Lenz · Olivia Grace Applegate · Malcolm Goodwin · David Anders · Krishna Smitha · Michael Papajohn · Isaiah LaBorde&lt;/p&gt;&lt;p class=&quot;cast&quot; style=&quot;margin-top:8px&quot;&gt;Produced by Isaiah LaBorde · Written and directed by Aaron Jay Rome&lt;/p&gt;&lt;p style=&quot;margin:12px 0 0&quot;&gt;&lt;a href=&quot;https://www.imdb.com/title/tt35397180/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;★ View on IMDb&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;film&quot;&gt;&lt;h3&gt;&lt;img src=&quot;https://hpwihogzttscakcycmio.supabase.co/storage/v1/object/public/dts/brand/silt-logo-v1.png&quot; alt=&quot;Silt&quot; width=&quot;900&quot; height=&quot;385&quot; loading=&quot;lazy&quot; style=&quot;display:block;height:auto;max-width:100%;width:230px&quot;&gt;&lt;/h3&gt;&lt;div class=&quot;genre&quot;&gt;Cosmic thriller · Cabin-in-the-woods · Elevated horror&lt;/div&gt;&lt;p&gt;A lakeside retreat. A fractured group of friends. A weekend that was supposed to fix everything. Old wounds have a way of surfacing — and whatever is living under that water knows exactly where to find them.&lt;/p&gt;&lt;p class=&quot;cast&quot;&gt;Andrea Sixtos · David Anders · Malcolm Goodwin · Tommy Wiseau · Olivia Grace Applegate · Michael Papajohn · Vernon Davis · Krishna Smitha · Isaiah LaBorde&lt;/p&gt;&lt;p class=&quot;cast&quot; style=&quot;margin-top:8px&quot;&gt;Story by Vernon Davis &amp;amp; Tiffany Toney · Produced by Isaiah LaBorde · Executive producer Vernon Davis · Written and directed by Aaron Jay Rome&lt;/p&gt;&lt;p style=&quot;margin:12px 0 0&quot;&gt;&lt;a href=&quot;https://www.imdb.com/title/tt35855318/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;★ View on IMDb&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/section&gt;
 
 &lt;section id=&quot;s7&quot; data-roles=&quot;captain filmmaker supporter team&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;
@@ -705,7 +742,7 @@ IMDb: imdb.me/aaronjayrome&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;
     <button class="ghost sel" data-for="sql-kit-assets">Select all</button>
     
     <span class="msg"></span>
-    <span class="size">20.8 KB</span>
+    <span class="size">21.0 KB</span>
   </div>
   <textarea readonly spellcheck="false" data-code="sql-kit-assets">-- ============================================================
 -- THE WHOLE KIT, FOR EVERY AUDIENCE  ·  generated, do not hand-edit
@@ -902,7 +939,7 @@ update dts_ambassadors a
 -- ============================================================
 -- 4 · THE SHARED IMAGE BIN
 -- ============================================================
--- Read off the 53 images actually published at
+-- Read off the 54 images actually published at
 --   https://aaronjayrome.github.io/dts-creative-kit/images/
 -- so a row cannot point at a URL that does not exist. Fills EVERY ACTIVE SET by
 -- cross join rather than a list of slugs somebody has to remember to extend.
@@ -914,6 +951,7 @@ create temporary table _kit_bin (
 ) on commit drop;
 
 insert into _kit_bin (sort, name, note, url, width, height) values
+  (52, &#x27;Trailer · Silt Official Trailer Thumb&#x27;, &#x27;1280 x 720&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/trailer-silt-official-trailer-thumb.jpg&#x27;, 1280, 720),
   (102, &#x27;Still · Anna Beth Post Office Antlers 001&#x27;, &#x27;1080 x 454&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-post-office-antlers-001.jpg&#x27;, 1080, 454),
   (104, &#x27;Still · Anna Beth Red Cu&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-red-cu.jpg&#x27;, 1080, 455),
   (106, &#x27;Still · Anna Beth Trappers 001&#x27;, &#x27;1080 x 455&#x27;, &#x27;https://aaronjayrome.github.io/dts-creative-kit/images/still-w01-anna-beth-trappers-001.jpg&#x27;, 1080, 455),
@@ -983,7 +1021,7 @@ commit;
 -- ============================================================
 -- 5 · VERIFY
 -- ============================================================
--- every active set should report 53 assets and 4 captions
+-- every active set should report 54 assets and 4 captions
 select s.slug,
        (select count(*) from dts_kit_assets   k where k.set_slug = s.slug) as assets,
        (select count(*) from dts_kit_captions c where c.set_slug = s.slug) as captions
